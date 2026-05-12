@@ -1,0 +1,1716 @@
+{
+  "apps": {
+    "MetInfo": {
+      "cats": [1],
+      "description": "MetInfo（米拓建站）是一款基于 PHP+MySQL 的企业建站系统，主要面向中小企业。",
+      "website": "https://www.metinfo.cn",
+      "icon": "MetInfo.png",
+      "headers": {
+        "set-cookie": "metinfo_"
+      },
+      "html": [
+        "Powered by <a [^>]*>MetInfo</a>",
+        "content=\"MetInfo[^\"]*\"\\;version:\\1",
+        "/templates/met/"
+      ],
+      "meta": {
+        "generator": [
+          "^MetInfo(?: ([\\d.]+))?$\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "Empire CMS": {
+      "cats": [1],
+      "description": "帝国 CMS（EmpireCMS）是国内主流的开源 PHP CMS，主打高负载新闻/内容站。",
+      "website": "https://www.phome.net",
+      "icon": "EmpireCMS.png",
+      "html": [
+        "Powered by <a [^>]*phome\\.net[^>]*>EmpireCMS</a>",
+        "<!--Powered by EmpireCMS",
+        "/e/data/(?:images|js|tmp)/"
+      ],
+      "meta": {
+        "generator": [
+          "^EmpireCMS(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "PbootCMS": {
+      "cats": [1],
+      "description": "PbootCMS 是一款基于 PHP 的免费开源企业建站系统。",
+      "website": "https://www.pbootcms.com",
+      "icon": "PbootCMS.png",
+      "html": [
+        "Powered by <a [^>]*>PbootCMS</a>",
+        "content=\"PbootCMS[^\"]*\""
+      ],
+      "meta": {
+        "generator": [
+          "^PbootCMS(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "74CMS": {
+      "cats": [1],
+      "description": "齐博 74CMS 是国内常见的 PHP 人才招聘系统。",
+      "website": "https://www.74cms.com",
+      "icon": "74CMS.png",
+      "html": [
+        "Powered by <a [^>]*74cms[^>]*>74CMS</a>",
+        "/74cms/templates/",
+        "<title>[^<]*74cms[^<]*</title>"
+      ],
+      "meta": {
+        "generator": [
+          "^74cms(?:_([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "苹果CMS": {
+      "cats": [1, 14],
+      "description": "苹果 CMS（maccms）是国内常见的 PHP 视频内容管理系统。",
+      "website": "https://www.maccms.cn",
+      "icon": "Maccms.png",
+      "html": [
+        "Powered by <a [^>]*>maccms[^<]*</a>\\;confidence:50",
+        "/template/[^/]+/(?:html|css|js)/maccms",
+        "<a [^>]*>maccms[^<]*</a>"
+      ],
+      "cookies": {
+        "maccms_": "\\;confidence:50"
+      },
+      "meta": {
+        "generator": [
+          "^maccms(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "DouPHP": {
+      "cats": [1, 6],
+      "description": "DouPHP（豆豆CMS）是基于 PHP+MySQL 的轻量级企业建站系统。",
+      "website": "https://www.douco.com",
+      "icon": "DouPHP.png",
+      "html": [
+        "Powered by <a [^>]*douphp[^>]*>DouPHP</a>",
+        "<!--DouPHP",
+        "/install/douphp\\.lock"
+      ],
+      "meta": {
+        "generator": [
+          "^DouPHP(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "CmsEasy": {
+      "cats": [1],
+      "description": "CmsEasy 是国内一款基于 PHP 的开源企业建站系统。",
+      "website": "https://www.cmseasy.cn",
+      "icon": "CmsEasy.png",
+      "html": [
+        "Powered by <a [^>]*cmseasy[^>]*>CmsEasy</a>",
+        "/cmseasy/data/",
+        "<!-- Powered by CmsEasy"
+      ],
+      "cookies": {
+        "cmseasy_": "\\;confidence:50"
+      },
+      "implies": ["PHP"]
+    },
+    "SDCMS": {
+      "cats": [1],
+      "description": "SDCMS 是基于 ASP/PHP 的轻量级国产 CMS。",
+      "website": "https://www.sdcms.cn",
+      "icon": "SDCMS.png",
+      "html": [
+        "Powered by <a [^>]*sdcms[^>]*>SDCMS</a>\\;confidence:75",
+        "<!-- Powered By SDCMS"
+      ],
+      "meta": {
+        "generator": [
+          "^SDCMS(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      }
+    },
+    "JeecgBoot": {
+      "cats": [18],
+      "description": "JeecgBoot 是基于 Spring Boot + Vue 的国产低代码开发平台。",
+      "website": "https://www.jeecg.com",
+      "icon": "Jeecg.png",
+      "html": [
+        "<title>[^<]*Jeecg[ -]?Boot[^<]*</title>",
+        "jeecg-boot"
+      ],
+      "headers": {
+        "x-access-token": ".*\\;confidence:60"
+      },
+      "scriptSrc": [
+        "/jeecg-boot/",
+        "jeecgboot"
+      ],
+      "implies": ["Java", "Spring Boot", "Vue.js"]
+    },
+    "JeeSite": {
+      "cats": [18, 1],
+      "description": "JeeSite 是基于 Spring Boot 的企业级快速开发平台。",
+      "website": "https://jeesite.com",
+      "icon": "JeeSite.png",
+      "html": [
+        "<title>[^<]*JeeSite[^<]*</title>",
+        "Powered by <a [^>]*jeesite[^>]*>JeeSite</a>"
+      ],
+      "scriptSrc": [
+        "/jeesite/",
+        "/static/jeesite"
+      ],
+      "implies": ["Java"]
+    },
+    "RuoYi": {
+      "cats": [18, 1],
+      "description": "RuoYi（若依）是基于 Spring Boot/Vue 的开源后台权限管理系统。",
+      "website": "https://ruoyi.vip",
+      "icon": "RuoYi.png",
+      "html": [
+        "<title>RuoYi[^<]*</title>",
+        "<title>若依[^<]*</title>",
+        "若依管理系统",
+        "ruoyi-admin",
+        "Copyright &copy; [\\d-]+ <a [^>]*>ruoyi\\.vip</a>"
+      ],
+      "scriptSrc": [
+        "/ruoyi/",
+        "ruoyi\\.js"
+      ],
+      "implies": ["Java"]
+    },
+    "JPress": {
+      "cats": [1],
+      "description": "JPress 是基于 Java + Jboot 的开源 CMS。",
+      "website": "https://www.jpress.io",
+      "icon": "JPress.png",
+      "html": [
+        "Powered by <a [^>]*jpress[^>]*>JPress</a>",
+        "<meta name=\"application-name\" content=\"JPress\""
+      ],
+      "meta": {
+        "generator": [
+          "^JPress(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["Java"]
+    },
+    "JeeCMS": {
+      "cats": [1],
+      "description": "JeeCMS 是基于 Java 的开源企业内容管理系统。",
+      "website": "https://www.jeecms.com",
+      "icon": "JeeCMS.png",
+      "html": [
+        "Powered by <a [^>]*jeecms[^>]*>JeeCMS</a>",
+        "/jeecms/r/cms/",
+        "<!--JeeCMS"
+      ],
+      "meta": {
+        "generator": [
+          "^JeeCMS(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["Java"]
+    },
+    "OneThink": {
+      "cats": [1],
+      "description": "OneThink 是基于 ThinkPHP 3.x 的开源内容管理框架。",
+      "website": "https://www.onethink.cn",
+      "icon": "OneThink.png",
+      "html": [
+        "Powered by <a [^>]*onethink[^>]*>OneThink</a>",
+        "/Public/static/onethink"
+      ],
+      "implies": ["ThinkPHP", "PHP"]
+    },
+    "HiShop": {
+      "cats": [1, 6],
+      "description": "HiShop（海商）是国内主流的电商建站系统。",
+      "website": "https://www.hishop.com.cn",
+      "icon": "HiShop.png",
+      "html": [
+        "Powered by <a [^>]*hishop[^>]*>HiShop</a>",
+        "/templates/[^/]+/hishop"
+      ],
+      "cookies": {
+        "hishop_": "\\;confidence:50"
+      }
+    },
+    "HDWiki": {
+      "cats": [8],
+      "description": "HDWiki 是互动百科开源的中文 wiki 系统。",
+      "website": "https://kaiyuan.hudong.com",
+      "icon": "HDWiki.png",
+      "html": [
+        "Powered by <a [^>]*>HDWiki</a>",
+        "/hdwiki/",
+        "<meta name=\"generator\" content=\"HDWiki"
+      ],
+      "meta": {
+        "generator": [
+          "^HDWiki(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "Z-BlogPHP": {
+      "cats": [1, 11],
+      "description": "Z-BlogPHP 是国内常见的 PHP 博客建站系统。",
+      "website": "https://www.zblogcn.com",
+      "icon": "Z-Blog.png",
+      "html": [
+        "<meta name=\"generator\" content=\"Z-BlogPHP",
+        "Powered by <a [^>]*zblogcn[^>]*>Z-BlogPHP</a>",
+        "/zb_users/theme/",
+        "/zb_system/"
+      ],
+      "meta": {
+        "generator": [
+          "^Z-BlogPHP(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "Typecho": {
+      "cats": [1, 11],
+      "description": "Typecho 是国内开源的轻量级 PHP 博客系统。",
+      "website": "https://typecho.org",
+      "icon": "Typecho.png",
+      "html": [
+        "<meta name=\"generator\" content=\"Typecho",
+        "Powered by <a [^>]*typecho[^>]*>Typecho</a>",
+        "/usr/themes/[^/]+/",
+        "Typecho_Cookie_"
+      ],
+      "cookies": {
+        "typecho_": "\\;confidence:75"
+      },
+      "meta": {
+        "generator": [
+          "^Typecho(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "Emlog": {
+      "cats": [1, 11],
+      "description": "Emlog 是国内开源的轻量级 PHP 博客与建站系统。",
+      "website": "https://www.emlog.net",
+      "icon": "Emlog.png",
+      "html": [
+        "Powered by <a [^>]*emlog[^>]*>Emlog</a>",
+        "<meta name=\"generator\" content=\"emlog",
+        "/content/templates/[^/]+/main\\.css"
+      ],
+      "meta": {
+        "generator": [
+          "^emlog(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["PHP"]
+    },
+    "Discuz! Q": {
+      "cats": [2],
+      "description": "Discuz! Q 是腾讯开源的下一代社区系统。",
+      "website": "https://discuz.chat",
+      "icon": "Discuz.png",
+      "html": [
+        "<title>[^<]*Discuz! Q[^<]*</title>",
+        "Powered by <a [^>]*>Discuz! Q</a>",
+        "/discuz-q/"
+      ],
+      "implies": ["PHP"]
+    },
+    "WeCenter": {
+      "cats": [2],
+      "description": "WeCenter 是国内开源的社交化知识社区系统。",
+      "website": "https://www.wecenter.com",
+      "icon": "WeCenter.png",
+      "html": [
+        "Powered by <a [^>]*wecenter[^>]*>WeCenter</a>",
+        "<meta name=\"description\" content=\"[^\"]*WeCenter",
+        "/static/wecenter"
+      ],
+      "cookies": {
+        "_wecenter_session": ""
+      },
+      "implies": ["PHP"]
+    },
+    "Tipask": {
+      "cats": [2],
+      "description": "Tipask 是国内开源的问答系统，基于 Laravel。",
+      "website": "https://www.tipask.com",
+      "icon": "Tipask.png",
+      "html": [
+        "Powered by <a [^>]*tipask[^>]*>Tipask</a>",
+        "<meta name=\"generator\" content=\"Tipask"
+      ],
+      "meta": {
+        "generator": [
+          "^Tipask(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "implies": ["Laravel", "PHP"]
+    },
+    "通达OA": {
+      "cats": [50],
+      "description": "通达 OA（TongdaOA / 通达信科）是国内常见的办公自动化系统。",
+      "website": "https://www.tongda2000.com",
+      "icon": "TongdaOA.png",
+      "html": [
+        "<title>[^<]*通达[^<]*</title>",
+        "<title>[^<]*Office Anywhere[^<]*</title>",
+        "/static/images/tongda\\.gif",
+        "/inc/common\\.js\\?ver=",
+        "TongDa OA"
+      ],
+      "scriptSrc": [
+        "/inc/common\\.js",
+        "/static/js/inc/"
+      ]
+    },
+    "致远OA": {
+      "cats": [50],
+      "description": "致远互联 OA（Seeyon / A6 / A8 / G6）是国内主流的协同办公系统。",
+      "website": "https://www.seeyon.com",
+      "icon": "Seeyon.png",
+      "html": [
+        "<title>[^<]*(?:致远|Seeyon|seeyon)[^<]*</title>",
+        "/seeyon/common/",
+        "/seeyon/USER-DATA/IMAGES/",
+        "var _ctxPath = \"/seeyon\"",
+        "Seeyon Software"
+      ],
+      "scriptSrc": [
+        "/seeyon/main\\.do",
+        "/seeyon/common/js/"
+      ],
+      "implies": ["Java"]
+    },
+    "泛微e-cology": {
+      "cats": [50],
+      "description": "泛微 e-cology 是国内大型企业广泛使用的协同办公平台。",
+      "website": "https://www.weaver.com.cn",
+      "icon": "Weaver.png",
+      "html": [
+        "<title>[^<]*(?:泛微|e-cology|ecology)[^<]*</title>",
+        "/wui/theme/",
+        "/wui/index\\.html",
+        "weaver\\.common\\.",
+        "ecology_JSessionid"
+      ],
+      "cookies": {
+        "ecology_JSessionid": "",
+        "loginPageURL": ""
+      },
+      "scriptSrc": [
+        "/js/weaver\\.",
+        "/wui/common/"
+      ],
+      "implies": ["Java"]
+    },
+    "泛微e-office": {
+      "cats": [50],
+      "description": "泛微 e-office 是面向中小企业的协同办公平台。",
+      "website": "https://www.weaver.com.cn/eoffice.html",
+      "icon": "Weaver.png",
+      "html": [
+        "<title>[^<]*(?:e-office|E-Office|eoffice)[^<]*</title>",
+        "/eoffice_resource/",
+        "/general/login_code\\.php",
+        "var _eoffice"
+      ],
+      "scriptSrc": [
+        "/eoffice/",
+        "eoffice_loading"
+      ],
+      "implies": ["PHP"]
+    },
+    "泛微e-mobile": {
+      "cats": [50, 26],
+      "description": "泛微 e-mobile 是泛微面向移动办公的客户端服务端。",
+      "website": "https://www.weaver.com.cn",
+      "icon": "Weaver.png",
+      "html": [
+        "<title>[^<]*(?:e-mobile|EMobile)[^<]*</title>",
+        "/client/login\\.jsp"
+      ],
+      "scriptSrc": [
+        "/emobile/"
+      ],
+      "implies": ["Java"]
+    },
+    "蓝凌OA": {
+      "cats": [50],
+      "description": "蓝凌 OA（Landray）是大型企业常用的协同管理与知识管理平台。",
+      "website": "https://www.landray.com.cn",
+      "icon": "Landray.png",
+      "html": [
+        "<title>[^<]*(?:蓝凌|Landray|landray)[^<]*</title>",
+        "/sys/portal/",
+        "/sys/ui/",
+        "Landray\\.MainData"
+      ],
+      "scriptSrc": [
+        "/sys/ui/extend/theme/",
+        "/resource/landray"
+      ],
+      "implies": ["Java"]
+    },
+    "华天动力OA": {
+      "cats": [50],
+      "description": "华天动力 OA 是国内常见的协同办公系统。",
+      "website": "https://www.oa8000.com",
+      "icon": "HuatianOA.png",
+      "html": [
+        "<title>[^<]*华天动力[^<]*</title>",
+        "OA8000",
+        "/htmis/",
+        "/OAapp/"
+      ],
+      "implies": ["Java"]
+    },
+    "金和OA": {
+      "cats": [50],
+      "description": "金和 OA（C6 / JC6）是国内的协同办公平台。",
+      "website": "https://www.jinher.com",
+      "icon": "JinherOA.png",
+      "html": [
+        "<title>[^<]*金和[^<]*</title>",
+        "<title>[^<]*JinherOA[^<]*</title>",
+        "Jinher\\.OA",
+        "/C6/JHSoft\\."
+      ],
+      "scriptSrc": [
+        "/C6/Jhsoft\\.Web"
+      ]
+    },
+    "用友NC": {
+      "cats": [50],
+      "description": "用友 NC / NCCloud 是大型企业广泛使用的 ERP/财务系统。",
+      "website": "https://www.yonyou.com",
+      "icon": "Yonyou.png",
+      "html": [
+        "<title>[^<]*用友[^<]*</title>",
+        "<title>[^<]*(?:NC Cloud|NCCloud|YonyouNC)[^<]*</title>",
+        "/nccloud/",
+        "/uapjs/jsvm",
+        "yyuap"
+      ],
+      "scriptSrc": [
+        "/nccloud/",
+        "/uapjs/"
+      ],
+      "implies": ["Java"]
+    },
+    "用友U8": {
+      "cats": [50],
+      "description": "用友 U8 是面向中型企业的 ERP 软件。",
+      "website": "https://www.yonyou.com",
+      "icon": "Yonyou.png",
+      "html": [
+        "<title>[^<]*U8[^<]*</title>",
+        "/U8Web/",
+        "U8Login",
+        "U8\\.UFIDA\\."
+      ]
+    },
+    "金蝶EAS": {
+      "cats": [50],
+      "description": "金蝶 EAS（Kingdee）是国内主流的企业管理软件。",
+      "website": "https://www.kingdee.com",
+      "icon": "Kingdee.png",
+      "html": [
+        "<title>[^<]*(?:Kingdee|金蝶|EAS)[^<]*</title>",
+        "/easwebclient/",
+        "/portal/htmlscript/easCorePortal",
+        "kdsvr"
+      ],
+      "scriptSrc": [
+        "/easwebclient/",
+        "/portal/easweb"
+      ],
+      "implies": ["Java"]
+    },
+    "金蝶云·星空": {
+      "cats": [50, 62],
+      "description": "金蝶云·星空（K/3 Cloud）是金蝶面向中大型企业的云 ERP。",
+      "website": "https://www.kingdee.com",
+      "icon": "Kingdee.png",
+      "html": [
+        "<title>[^<]*(?:K/3 Cloud|K3Cloud|金蝶云·星空)[^<]*</title>",
+        "/k3cloud/",
+        "/kdsvc/login",
+        "Kingdee\\.BOS"
+      ],
+      "scriptSrc": [
+        "/k3cloud/",
+        "/kdsvc/"
+      ]
+    },
+    "Coremail": {
+      "cats": [30, 75],
+      "description": "Coremail 是国内主流的邮件系统（论客）。",
+      "website": "https://www.coremail.cn",
+      "icon": "Coremail.png",
+      "html": [
+        "<title>[^<]*(?:Coremail|论客)[^<]*</title>",
+        "Coremail XT",
+        "/coremail/common/",
+        "/coremail/index"
+      ],
+      "headers": {
+        "x-coremail": "",
+        "x-cm-transid": ""
+      },
+      "scriptSrc": [
+        "/coremail/"
+      ]
+    },
+    "TurboMail": {
+      "cats": [30, 75],
+      "description": "TurboMail 是国内邮件系统厂商拓波软件的邮件服务系统。",
+      "website": "https://www.turbomail.org",
+      "icon": "TurboMail.png",
+      "html": [
+        "<title>[^<]*TurboMail[^<]*</title>",
+        "TurboMail邮件系统",
+        "/turbomail/",
+        "var turbomail"
+      ]
+    },
+    "U-Mail": {
+      "cats": [30, 75],
+      "description": "U-Mail 是国内常见的企业邮件系统。",
+      "website": "https://www.comingchina.com",
+      "icon": "U-Mail.png",
+      "html": [
+        "<title>[^<]*U-Mail[^<]*</title>",
+        "/webmail/client/",
+        "U-Mail Server",
+        "umail_login"
+      ],
+      "headers": {
+        "x-umail": ""
+      }
+    },
+    "WinWebMail": {
+      "cats": [30, 75],
+      "description": "WinWebMail 是国内常见的 Windows 平台邮件系统。",
+      "website": "http://www.winwebmail.com",
+      "icon": "WinWebMail.png",
+      "html": [
+        "<title>[^<]*WinWebMail[^<]*</title>",
+        "/admin/help/winwebmail",
+        "WinWebMail Server"
+      ]
+    },
+    "Magic Winmail": {
+      "cats": [30, 75],
+      "description": "Magic Winmail Server 是国内常见的邮件系统。",
+      "website": "https://www.magicwinmail.net",
+      "icon": "Winmail.png",
+      "html": [
+        "<title>[^<]*(?:Winmail|Magic Winmail)[^<]*</title>",
+        "Winmail Server",
+        "/admin/login\\.php\\?lang="
+      ]
+    },
+    "亿邮邮件系统": {
+      "cats": [30, 75],
+      "description": "亿邮（Eyou）邮件系统是国内常见的企业邮件平台。",
+      "website": "https://www.eyou.net",
+      "icon": "Eyou.png",
+      "html": [
+        "<title>[^<]*亿邮[^<]*</title>",
+        "<title>[^<]*eYou[^<]*</title>",
+        "/webmail/eyou",
+        "eyou_session"
+      ],
+      "cookies": {
+        "eyou_session": ""
+      }
+    },
+    "深信服SSL VPN": {
+      "cats": [46, 16],
+      "description": "深信服 SSL VPN 是国内主流的企业远程接入网关。",
+      "website": "https://www.sangfor.com.cn",
+      "icon": "Sangfor.png",
+      "html": [
+        "<title>[^<]*(?:深信服|SANGFOR|Sangfor)[^<]*SSL[^<]*</title>",
+        "/por/login_psw\\.csp",
+        "SANGFOR\\.Login",
+        "/svpn_html/login\\.html",
+        "Sangfor SSL VPN"
+      ],
+      "scriptSrc": [
+        "/por/",
+        "sangfor\\.js"
+      ],
+      "headers": {
+        "server": "Sangfor"
+      }
+    },
+    "深信服AC": {
+      "cats": [16, 37],
+      "description": "深信服 AC（上网行为管理）。",
+      "website": "https://www.sangfor.com.cn",
+      "icon": "Sangfor.png",
+      "html": [
+        "<title>[^<]*SANGFOR(?:[^<]* )?AC[^<]*</title>",
+        "<title>[^<]*上网行为管理[^<]*</title>",
+        "Sangfor SANGFOR Internet Access Management",
+        "/ac_portal/login\\.php"
+      ]
+    },
+    "深信服AF": {
+      "cats": [16, 37],
+      "description": "深信服 AF（下一代应用防火墙 NGAF）。",
+      "website": "https://www.sangfor.com.cn",
+      "icon": "Sangfor.png",
+      "html": [
+        "<title>[^<]*SANGFOR(?:[^<]* )?(?:AF|NGAF)[^<]*</title>",
+        "<title>[^<]*下一代防火墙[^<]*SANGFOR[^<]*</title>",
+        "/dlogin\\.php\\?nodeid"
+      ]
+    },
+    "深信服EDR": {
+      "cats": [16],
+      "description": "深信服 EDR 终端检测响应平台。",
+      "website": "https://www.sangfor.com.cn",
+      "icon": "Sangfor.png",
+      "html": [
+        "<title>[^<]*EDR[^<]*</title>",
+        "<title>[^<]*终端检测响应平台[^<]*</title>",
+        "Sangfor EDR",
+        "/tool/log/c\\.php"
+      ]
+    },
+    "深信服WAF": {
+      "cats": [16],
+      "description": "深信服 WAF（Web 应用防火墙）。",
+      "website": "https://www.sangfor.com.cn",
+      "icon": "Sangfor.png",
+      "html": [
+        "<title>[^<]*SANGFOR(?:[^<]* )?WAF[^<]*</title>"
+      ]
+    },
+    "奇安信天眼": {
+      "cats": [16],
+      "description": "奇安信天眼新一代威胁感知系统。",
+      "website": "https://www.qianxin.com",
+      "icon": "QiAnXin.png",
+      "html": [
+        "<title>[^<]*天眼[^<]*</title>",
+        "<title>[^<]*Skyeye[^<]*</title>",
+        "qianxin/skyeye"
+      ]
+    },
+    "奇安信网神SecGate": {
+      "cats": [16],
+      "description": "奇安信网神 SecGate 防火墙 / VPN。",
+      "website": "https://www.qianxin.com",
+      "icon": "QiAnXin.png",
+      "html": [
+        "<title>[^<]*SecGate[^<]*</title>",
+        "<title>[^<]*网神[^<]*</title>"
+      ]
+    },
+    "绿盟WAF": {
+      "cats": [16],
+      "description": "绿盟科技 Web 应用防护系统（WAF）。",
+      "website": "https://www.nsfocus.com.cn",
+      "icon": "NSFocus.png",
+      "html": [
+        "<title>[^<]*NSFOCUS WAF[^<]*</title>",
+        "<title>[^<]*绿盟[^<]*Web应用防护[^<]*</title>",
+        "/portal/index/login"
+      ],
+      "headers": {
+        "server": "NSFocus WAF"
+      }
+    },
+    "绿盟IPS": {
+      "cats": [16, 37],
+      "description": "绿盟科技 入侵防御系统（IPS）。",
+      "website": "https://www.nsfocus.com.cn",
+      "icon": "NSFocus.png",
+      "html": [
+        "<title>[^<]*NSFOCUS NIPS[^<]*</title>",
+        "<title>[^<]*绿盟[^<]*入侵防御[^<]*</title>"
+      ]
+    },
+    "山石网科Hillstone": {
+      "cats": [37, 16],
+      "description": "山石网科（Hillstone）防火墙。",
+      "website": "https://www.hillstonenet.com.cn",
+      "icon": "Hillstone.png",
+      "html": [
+        "<title>[^<]*Hillstone[^<]*</title>",
+        "<title>[^<]*山石网科[^<]*</title>",
+        "/rest/api/login"
+      ],
+      "headers": {
+        "server": "Hillstone"
+      }
+    },
+    "天融信TopApp-LB": {
+      "cats": [65, 37],
+      "description": "天融信负载均衡 TopApp-LB。",
+      "website": "https://www.topsec.com.cn",
+      "icon": "Topsec.png",
+      "html": [
+        "<title>[^<]*天融信[^<]*</title>",
+        "<title>[^<]*Topsec[^<]*</title>",
+        "<title>[^<]*TopApp-LB[^<]*</title>"
+      ]
+    },
+    "天融信防火墙": {
+      "cats": [16, 37],
+      "description": "天融信 NGFW 下一代防火墙。",
+      "website": "https://www.topsec.com.cn",
+      "icon": "Topsec.png",
+      "html": [
+        "<title>[^<]*Topsec(?:Os|NGFW)?[^<]*</title>",
+        "Topsec Network Security Technology"
+      ]
+    },
+    "启明星辰天清汉马": {
+      "cats": [16, 37],
+      "description": "启明星辰 天清汉马 USG 防火墙。",
+      "website": "https://www.venustech.com.cn",
+      "icon": "Venustech.png",
+      "html": [
+        "<title>[^<]*(?:天清|VenusTech|Venusense)[^<]*</title>",
+        "<title>[^<]*汉马[^<]*</title>",
+        "VenusInfo"
+      ]
+    },
+    "安恒明御WAF": {
+      "cats": [16],
+      "description": "安恒信息 明御 Web 应用防火墙。",
+      "website": "https://www.dbappsecurity.com.cn",
+      "icon": "DBAPP.png",
+      "html": [
+        "<title>[^<]*明御[^<]*WAF[^<]*</title>",
+        "<title>[^<]*安恒[^<]*</title>",
+        "WebRAY"
+      ],
+      "headers": {
+        "server": "WebRAY"
+      }
+    },
+    "安恒玄武盾": {
+      "cats": [16],
+      "description": "安恒信息 玄武盾 云防御。",
+      "website": "https://www.dbappsecurity.com.cn",
+      "icon": "DBAPP.png",
+      "html": [
+        "<title>[^<]*玄武盾[^<]*</title>",
+        "玄武盾",
+        "xuanwudun"
+      ]
+    },
+    "网御星云SecFox": {
+      "cats": [16],
+      "description": "网御星云 SecFox 综合日志审计/堡垒机。",
+      "website": "https://www.leadsec.com.cn",
+      "icon": "Leadsec.png",
+      "html": [
+        "<title>[^<]*SecFox[^<]*</title>",
+        "<title>[^<]*网御[^<]*星云[^<]*</title>"
+      ]
+    },
+    "网康NGFW": {
+      "cats": [16, 37],
+      "description": "网康下一代防火墙。",
+      "website": "https://www.netentsec.com",
+      "icon": "Netentsec.png",
+      "html": [
+        "<title>[^<]*NetentSec[^<]*</title>",
+        "<title>[^<]*网康[^<]*</title>",
+        "NS-NGFW"
+      ]
+    },
+    "华为USG": {
+      "cats": [16, 37],
+      "description": "华为 USG 系列防火墙 / 网关设备。",
+      "website": "https://www.huawei.com",
+      "icon": "Huawei.png",
+      "html": [
+        "<title>[^<]*USG\\d+[^<]*</title>",
+        "<title>[^<]*Huawei[^<]*USG[^<]*</title>",
+        "/eweb/dist/index\\.html"
+      ],
+      "headers": {
+        "server": "^Huawei[^/]*"
+      }
+    },
+    "华为eSpace": {
+      "cats": [52, 75],
+      "description": "华为 eSpace 统一通信平台。",
+      "website": "https://e.huawei.com",
+      "icon": "Huawei.png",
+      "html": [
+        "<title>[^<]*eSpace[^<]*</title>",
+        "Huawei eSpace"
+      ]
+    },
+    "H3C设备": {
+      "cats": [37],
+      "description": "新华三 H3C 网络设备 Web 管理界面。",
+      "website": "https://www.h3c.com",
+      "icon": "H3C.png",
+      "html": [
+        "<title>[^<]*H3C[^<]*</title>",
+        "/wcn/frame/login\\.html",
+        "H3C Web Login",
+        "src=\"/images/H3C_"
+      ],
+      "headers": {
+        "server": "^h3c"
+      }
+    },
+    "锐捷网络设备": {
+      "cats": [37],
+      "description": "锐捷 Ruijie 网络设备 Web 管理界面。",
+      "website": "https://www.ruijie.com.cn",
+      "icon": "Ruijie.png",
+      "html": [
+        "<title>[^<]*Ruijie[^<]*</title>",
+        "<title>[^<]*锐捷[^<]*</title>",
+        "<title>[^<]*EWEB[^<]*</title>",
+        "/eweb/js"
+      ],
+      "headers": {
+        "server": "Ruijie"
+      }
+    },
+    "海康威视": {
+      "cats": [39, 37],
+      "description": "海康威视 Hikvision 摄像机 / NVR / DVR Web 管理界面。",
+      "website": "https://www.hikvision.com",
+      "icon": "Hikvision.png",
+      "html": [
+        "<title>[^<]*(?:Web Client|网络视频)[^<]*</title>\\;confidence:30",
+        "/doc/page/login\\.asp",
+        "/doc/ui/locale/",
+        "/SDK/webLanguage",
+        "App-WebViewer",
+        "Hikvision-Webs"
+      ],
+      "headers": {
+        "server": "(?:App-webs|webserver|DNVRS-Webs|Hikvision-Webs)",
+        "www-authenticate": "(?i)Hikvision"
+      },
+      "scriptSrc": [
+        "/SDK/web"
+      ]
+    },
+    "大华股份": {
+      "cats": [39, 37],
+      "description": "大华 Dahua 摄像机 / NVR / DVR Web 管理界面。",
+      "website": "https://www.dahuatech.com",
+      "icon": "Dahua.png",
+      "html": [
+        "<title>[^<]*(?:WEB SERVICE|Web Service)[^<]*</title>\\;confidence:30",
+        "/RPC2_Login",
+        "/current_config/Account",
+        "Dahua\\.LoginCommon"
+      ],
+      "headers": {
+        "www-authenticate": "(?i)Dahua"
+      },
+      "scriptSrc": [
+        "DhWeb\\.js"
+      ]
+    },
+    "宇视科技": {
+      "cats": [39, 37],
+      "description": "宇视科技 Uniview 摄像机 / NVR Web 管理界面。",
+      "website": "https://www.uniview.com",
+      "icon": "Uniview.png",
+      "html": [
+        "<title>[^<]*Uniview[^<]*</title>",
+        "uniview\\.js",
+        "/LAPI/V1\\.0/"
+      ],
+      "headers": {
+        "server": "uc-httpd"
+      }
+    },
+    "JumpServer": {
+      "cats": [46, 16],
+      "description": "JumpServer 是飞致云开源的多云堡垒机/PAM 平台。",
+      "website": "https://www.jumpserver.org",
+      "icon": "JumpServer.png",
+      "html": [
+        "<title>JumpServer</title>",
+        "<meta name=\"keywords\" content=\"JumpServer",
+        "src=\"/static/img/logo[^\"]*\\.png\"",
+        "jumpserver-js"
+      ],
+      "cookies": {
+        "jms_csrftoken": "",
+        "jumpserver_csrftoken": ""
+      },
+      "scriptSrc": [
+        "/static/js/jumpserver",
+        "/static/applets/"
+      ],
+      "headers": {
+        "x-jms-": ""
+      }
+    },
+    "齐治堡垒机": {
+      "cats": [46, 16],
+      "description": "齐治堡垒机 ShterM。",
+      "website": "https://www.shterm.com",
+      "icon": "Qizhi.png",
+      "html": [
+        "<title>[^<]*齐治[^<]*</title>",
+        "<title>[^<]*ShterM[^<]*</title>",
+        "QiZhi\\.Bastion",
+        "/audit/"
+      ]
+    },
+    "行云堡垒": {
+      "cats": [46, 16],
+      "description": "行云堡垒（XingYun Bastion）。",
+      "website": "https://www.xingyuncloud.com",
+      "icon": "XingYun.png",
+      "html": [
+        "<title>[^<]*行云堡垒[^<]*</title>",
+        "xingyun_bastion"
+      ]
+    },
+    "宝塔面板": {
+      "cats": [9, 47],
+      "description": "宝塔面板（BT-Panel）是国内主流的服务器运维管理面板。",
+      "website": "https://www.bt.cn",
+      "icon": "BTPanel.png",
+      "html": [
+        "<title>[^<]*宝塔[^<]*</title>",
+        "<title>(?:BT|安全入口)[^<]*</title>",
+        "宝塔Linux面板",
+        "bt_panel",
+        "BT-Panel"
+      ],
+      "headers": {
+        "server": "BT-Panel",
+        "set-cookie": "BT_USER_INFO"
+      },
+      "cookies": {
+        "request_token": "\\;confidence:50"
+      }
+    },
+    "aaPanel": {
+      "cats": [9, 47],
+      "description": "aaPanel 是宝塔面板的国际版。",
+      "website": "https://www.aapanel.com",
+      "icon": "aaPanel.png",
+      "html": [
+        "<title>[^<]*aaPanel[^<]*</title>",
+        "aaPanel Linux Panel",
+        "aapanel_logo"
+      ],
+      "headers": {
+        "server": "aaPanel",
+        "set-cookie": "aaPanel_"
+      }
+    },
+    "1Panel": {
+      "cats": [9, 47],
+      "description": "1Panel 是飞致云开源的现代化 Linux 服务器运维管理面板。",
+      "website": "https://1panel.cn",
+      "icon": "1Panel.png",
+      "html": [
+        "<title>1Panel</title>",
+        "<meta name=\"description\" content=\"1Panel",
+        "1panel-favicon"
+      ],
+      "headers": {
+        "set-cookie": "psession"
+      },
+      "scriptSrc": [
+        "1panel"
+      ]
+    },
+    "phpStudy小皮面板": {
+      "cats": [9, 47],
+      "description": "小皮面板（phpStudy）国内常见的开发环境/服务器面板。",
+      "website": "https://www.xp.cn",
+      "icon": "phpStudy.png",
+      "html": [
+        "<title>[^<]*小皮[^<]*</title>",
+        "<title>[^<]*phpStudy[^<]*</title>",
+        "xiaopi"
+      ]
+    },
+    "KindEditor": {
+      "cats": [24],
+      "description": "KindEditor 是国内常见的开源 HTML 富文本编辑器。",
+      "website": "http://kindeditor.net",
+      "icon": "KindEditor.png",
+      "html": [
+        "<script[^>]*kindeditor(?:-min)?\\.js[^>]*></script>"
+      ],
+      "scriptSrc": [
+        "/kindeditor(?:-all)?(?:-min)?\\.js",
+        "kindeditor/themes/"
+      ],
+      "js": {
+        "KindEditor.version": "^(.+)$\\;version:\\1"
+      }
+    },
+    "UEditor": {
+      "cats": [24],
+      "description": "UEditor 是百度开源的开源 HTML 富文本编辑器。",
+      "website": "https://fex.baidu.com/ueditor/",
+      "icon": "UEditor.png",
+      "html": [
+        "<script[^>]*ueditor(?:\\.all)?(?:\\.min)?\\.js[^>]*></script>"
+      ],
+      "scriptSrc": [
+        "/ueditor/(?:ueditor|third-party)",
+        "ueditor\\.all(?:\\.min)?\\.js"
+      ],
+      "js": {
+        "UE.version": "^(.+)$\\;version:\\1",
+        "UEDITOR_CONFIG": ""
+      }
+    },
+    "FineReport": {
+      "cats": [10],
+      "description": "FineReport（帆软报表）是国内主流的企业级报表与 BI 平台。",
+      "website": "https://www.fanruan.com/finereport",
+      "icon": "FineReport.png",
+      "html": [
+        "<title>[^<]*FineReport[^<]*</title>",
+        "<title>[^<]*帆软[^<]*</title>",
+        "/webroot/decision/login",
+        "FR\\.Decision",
+        "fine-report"
+      ],
+      "scriptSrc": [
+        "/webroot/decision/",
+        "fine-report"
+      ],
+      "headers": {
+        "server": "FineReport"
+      }
+    },
+    "FineBI": {
+      "cats": [10],
+      "description": "FineBI（帆软 BI）是国内主流的企业级商业智能平台。",
+      "website": "https://www.finebi.com",
+      "icon": "FineBI.png",
+      "html": [
+        "<title>[^<]*FineBI[^<]*</title>",
+        "<title>[^<]*帆软BI[^<]*</title>",
+        "/webroot/decision/login",
+        "BI\\.Decision",
+        "fine-bi"
+      ],
+      "scriptSrc": [
+        "fine-bi",
+        "/webroot/decision/finebi"
+      ]
+    },
+    "Smartbi": {
+      "cats": [10],
+      "description": "Smartbi 思迈特是国内自主可控的 BI 平台。",
+      "website": "https://www.smartbi.com.cn",
+      "icon": "Smartbi.png",
+      "html": [
+        "<title>[^<]*Smartbi[^<]*</title>",
+        "<title>[^<]*思迈特[^<]*</title>",
+        "/smartbi/vision/",
+        "smartbi\\.SystemInit"
+      ],
+      "scriptSrc": [
+        "/smartbi/vision/"
+      ]
+    },
+    "永洪BI": {
+      "cats": [10],
+      "description": "永洪 Yonghong BI 数据分析与可视化平台。",
+      "website": "https://www.yonghongtech.com",
+      "icon": "Yonghong.png",
+      "html": [
+        "<title>[^<]*Yonghong[^<]*</title>",
+        "<title>[^<]*永洪[^<]*</title>",
+        "/bi/Viewer",
+        "yonghong"
+      ]
+    },
+    "Nightingale夜莺监控": {
+      "cats": [10, 19],
+      "description": "Nightingale（夜莺）是国内开源的云原生监控告警平台。",
+      "website": "https://n9e.github.io",
+      "icon": "Nightingale.png",
+      "html": [
+        "<title>Nightingale</title>",
+        "n9e-fe",
+        "<meta name=\"description\" content=\"Nightingale"
+      ],
+      "scriptSrc": [
+        "/n9e/",
+        "n9e-fe"
+      ]
+    },
+    "DataEase": {
+      "cats": [10],
+      "description": "DataEase 是飞致云开源的国产数据可视化分析工具。",
+      "website": "https://dataease.io",
+      "icon": "DataEase.png",
+      "html": [
+        "<title>DataEase</title>",
+        "<meta name=\"description\" content=\"DataEase",
+        "dataease-favicon"
+      ],
+      "scriptSrc": [
+        "/dataease/"
+      ]
+    },
+    "MeterSphere": {
+      "cats": [44, 19],
+      "description": "MeterSphere 是飞致云开源的一站式测试平台。",
+      "website": "https://metersphere.io",
+      "icon": "MeterSphere.png",
+      "html": [
+        "<title>MeterSphere</title>",
+        "metersphere-favicon"
+      ],
+      "scriptSrc": [
+        "/metersphere/"
+      ]
+    },
+    "Halo": {
+      "cats": [1, 11],
+      "description": "Halo 是国内开源的 Java 博客与建站系统。",
+      "website": "https://halo.run",
+      "icon": "Halo.png",
+      "html": [
+        "<meta name=\"generator\" content=\"Halo",
+        "Powered by <a [^>]*halo[^>]*>Halo</a>"
+      ],
+      "meta": {
+        "generator": [
+          "^Halo(?: ([\\d.]+))?\\;version:\\1"
+        ]
+      },
+      "scriptSrc": [
+        "/themes/.+/source/",
+        "halo-comment"
+      ],
+      "headers": {
+        "server": "^Halo"
+      },
+      "implies": ["Java"]
+    },
+    "ShowDoc": {
+      "cats": [4],
+      "description": "ShowDoc 是国内开源的接口/API/技术文档工具。",
+      "website": "https://www.showdoc.cc",
+      "icon": "ShowDoc.png",
+      "html": [
+        "<title>[^<]*ShowDoc[^<]*</title>",
+        "showdoc"
+      ],
+      "scriptSrc": [
+        "/static/showdoc",
+        "showdoc"
+      ]
+    },
+    "YApi": {
+      "cats": [4, 47],
+      "description": "YApi 是去哪儿网开源的可视化 API 管理平台。",
+      "website": "https://github.com/YMFE/yapi",
+      "icon": "YApi.png",
+      "html": [
+        "<title>YApi[^<]*</title>",
+        "yapi-cli",
+        "/static/prd/index\\.js"
+      ],
+      "cookies": {
+        "_yapi_token": "",
+        "_yapi_uid": ""
+      }
+    },
+    "Apifox": {
+      "cats": [4, 47],
+      "description": "Apifox 是国内主流的 API 设计、开发与测试一体化工具。",
+      "website": "https://www.apifox.cn",
+      "icon": "Apifox.png",
+      "html": [
+        "<title>[^<]*Apifox[^<]*</title>",
+        "apifox\\.com"
+      ],
+      "scriptSrc": [
+        "apifox\\.com"
+      ]
+    },
+    "Eolinker": {
+      "cats": [4, 47],
+      "description": "Eolinker 是国内 API 管理协作平台。",
+      "website": "https://www.eolink.com",
+      "icon": "Eolinker.png",
+      "html": [
+        "<title>[^<]*(?:Eolinker|Eolink)[^<]*</title>",
+        "eolinker"
+      ]
+    },
+    "PaddlePaddle": {
+      "cats": [19, 27],
+      "description": "PaddlePaddle 是百度开源的深度学习框架（Web 服务）。",
+      "website": "https://www.paddlepaddle.org.cn",
+      "icon": "Paddle.png",
+      "html": [
+        "<title>[^<]*PaddlePaddle[^<]*</title>",
+        "paddlepaddle"
+      ]
+    },
+    "EasyImage": {
+      "cats": [19],
+      "description": "EasyImage 简单图床是国内常见的开源图床程序。",
+      "website": "https://github.com/icret/EasyImages2.0",
+      "icon": "EasyImage.png",
+      "html": [
+        "<title>[^<]*简单图床[^<]*</title>",
+        "<title>EasyImage[^<]*</title>",
+        "easyimage"
+      ]
+    },
+    "ChatGLM-Web": {
+      "cats": [19],
+      "description": "智谱 ChatGLM Web 推理界面。",
+      "website": "https://www.zhipuai.cn",
+      "icon": "ChatGLM.png",
+      "html": [
+        "<title>[^<]*ChatGLM[^<]*</title>"
+      ]
+    },
+    "钉钉开放平台": {
+      "cats": [52, 75],
+      "description": "钉钉（DingTalk）开放平台 Web 应用。",
+      "website": "https://open.dingtalk.com",
+      "icon": "DingTalk.png",
+      "html": [
+        "<title>[^<]*钉钉[^<]*</title>",
+        "dingtalk-jsbridge",
+        "dd-static"
+      ],
+      "scriptSrc": [
+        "g\\.alicdn\\.com/dingding/",
+        "ddapi"
+      ]
+    },
+    "企业微信": {
+      "cats": [52, 75],
+      "description": "企业微信（WeCom）相关网页。",
+      "website": "https://work.weixin.qq.com",
+      "icon": "WeCom.png",
+      "html": [
+        "<title>[^<]*企业微信[^<]*</title>",
+        "work\\.weixin\\.qq\\.com",
+        "wwapi"
+      ],
+      "scriptSrc": [
+        "wwcdn\\.weixin\\.qq\\.com",
+        "work\\.weixin\\.qq\\.com"
+      ]
+    },
+    "飞书Lark": {
+      "cats": [52, 75],
+      "description": "飞书 / Lark 协同办公平台。",
+      "website": "https://www.feishu.cn",
+      "icon": "Feishu.png",
+      "html": [
+        "<title>[^<]*(?:飞书|Lark)[^<]*</title>",
+        "feishu\\.cn",
+        "larksuite"
+      ],
+      "scriptSrc": [
+        "sf\\d-cn\\.feishucdn\\.com",
+        "lf-package-cn\\.feishucdn\\.com",
+        "feishu\\.cn"
+      ]
+    },
+    "小鹅通": {
+      "cats": [21, 6],
+      "description": "小鹅通是国内常见的知识付费/教学 SaaS 平台。",
+      "website": "https://www.xiaoe-tech.com",
+      "icon": "XiaoeTech.png",
+      "html": [
+        "<title>[^<]*小鹅通[^<]*</title>",
+        "xiaoe-tech\\.com",
+        "xeknow"
+      ],
+      "scriptSrc": [
+        "xiaoeknow\\.com",
+        "xiaoe-tech\\.com"
+      ]
+    },
+    "石墨文档": {
+      "cats": [50],
+      "description": "石墨文档（Shimo）在线协作文档。",
+      "website": "https://shimo.im",
+      "icon": "Shimo.png",
+      "html": [
+        "<title>[^<]*石墨[^<]*</title>",
+        "shimo\\.im"
+      ],
+      "scriptSrc": [
+        "shimo\\.im"
+      ]
+    },
+    "金山文档": {
+      "cats": [50],
+      "description": "金山文档（WPS Docs）在线协作文档。",
+      "website": "https://www.kdocs.cn",
+      "icon": "KDocs.png",
+      "html": [
+        "<title>[^<]*金山文档[^<]*</title>",
+        "kdocs\\.cn",
+        "wps365"
+      ],
+      "scriptSrc": [
+        "res\\.wps\\.cn",
+        "kdocs\\.cn"
+      ]
+    },
+    "腾讯文档": {
+      "cats": [50],
+      "description": "腾讯文档 在线协作文档。",
+      "website": "https://docs.qq.com",
+      "icon": "TencentDocs.png",
+      "html": [
+        "<title>[^<]*腾讯文档[^<]*</title>",
+        "docs\\.qq\\.com"
+      ],
+      "scriptSrc": [
+        "docs\\.gtimg\\.com",
+        "docs\\.qq\\.com"
+      ]
+    },
+    "加速乐Jiasule": {
+      "cats": [31, 16],
+      "description": "知道创宇加速乐 CDN/WAF。",
+      "website": "https://www.jiasule.com",
+      "icon": "Jiasule.png",
+      "html": [
+        "<title>jiasule",
+        "jsl_clearance",
+        "/cdn-cgi/jiasule"
+      ],
+      "headers": {
+        "server": "jsl/",
+        "set-cookie": "(?:__jsluid|__jsl_clearance|jsluid_h)"
+      },
+      "cookies": {
+        "__jsluid_h": "",
+        "__jsl_clearance_s": "",
+        "__jsl_clearance": ""
+      }
+    },
+    "ChinaCache": {
+      "cats": [31],
+      "description": "蓝汛 ChinaCache CDN。",
+      "website": "https://www.chinacache.com",
+      "icon": "ChinaCache.png",
+      "headers": {
+        "powered-by-chinacache": "",
+        "server": "ChinaCache",
+        "x-via": "[^,]*ChinaCache"
+      }
+    },
+    "白山云CDN": {
+      "cats": [31],
+      "description": "白山云 BaishanCDN。",
+      "website": "https://www.baishan.com",
+      "icon": "Baishan.png",
+      "headers": {
+        "server": "BaishanCDN",
+        "x-cache": "BaishanCDN",
+        "x-baishan": ""
+      }
+    },
+    "又拍云CDN": {
+      "cats": [31],
+      "description": "又拍云 UPYUN CDN/对象存储。",
+      "website": "https://www.upyun.com",
+      "icon": "Upyun.png",
+      "headers": {
+        "server": "(?:marco|UPYUN|nginx-upyun|tengine/upyun)",
+        "x-request-id": "^[a-f0-9-]+@upaiyun$\\;confidence:50"
+      }
+    },
+    "七牛云CDN": {
+      "cats": [31],
+      "description": "七牛云 Qiniu CDN/对象存储。",
+      "website": "https://www.qiniu.com",
+      "icon": "Qiniu.png",
+      "headers": {
+        "server": "(?:Qiniu|nginx-qiniu|QNWS)",
+        "x-reqid": ""
+      },
+      "html": [
+        "qnssl\\.com",
+        "qbox\\.me"
+      ]
+    },
+    "UCloud CDN": {
+      "cats": [31],
+      "description": "UCloud 优刻得 CDN。",
+      "website": "https://www.ucloud.cn",
+      "icon": "UCloud.png",
+      "headers": {
+        "x-ucdn-cache": "",
+        "server": "ucloud"
+      }
+    },
+    "京东云CDN": {
+      "cats": [31],
+      "description": "京东云 JDCloud CDN。",
+      "website": "https://www.jdcloud.com",
+      "icon": "JDCloud.png",
+      "headers": {
+        "x-jcs-via": "",
+        "x-jdcdn-cache": "",
+        "server": "JDCloud-CDN"
+      }
+    },
+    "腾讯云EdgeOne": {
+      "cats": [31, 16],
+      "description": "腾讯云 EdgeOne 边缘安全加速平台。",
+      "website": "https://cloud.tencent.com/product/teo",
+      "icon": "TencentCloud.png",
+      "headers": {
+        "server": "(?:TencentEdgeOne|Teo)",
+        "x-edgeone-request-id": ""
+      }
+    },
+    "阿里云WAF": {
+      "cats": [16],
+      "description": "阿里云 Web 应用防火墙。",
+      "website": "https://www.aliyun.com/product/waf",
+      "icon": "Aliyun.png",
+      "headers": {
+        "set-cookie": "(?:aliyungf_tc|acw_tc|acw_sc__v2|acw_sc__v3)"
+      },
+      "cookies": {
+        "aliyungf_tc": "",
+        "acw_tc": "",
+        "acw_sc__v2": "",
+        "acw_sc__v3": ""
+      },
+      "html": [
+        "<title>[^<]*Aliyun Security[^<]*</title>",
+        "errors\\.aliyun\\.com"
+      ]
+    },
+    "腾讯云WAF": {
+      "cats": [16],
+      "description": "腾讯云 Web 应用防火墙。",
+      "website": "https://cloud.tencent.com/product/waf",
+      "icon": "TencentCloud.png",
+      "headers": {
+        "server": "(?:Tencent-Waf|Tencent-WCS)",
+        "x-nws-log-uuid": "",
+        "set-cookie": "(?:TencentWAF|tc_qos)"
+      }
+    },
+    "百度云WAF": {
+      "cats": [16],
+      "description": "百度智能云 WAF / CDN。",
+      "website": "https://cloud.baidu.com/product/waf.html",
+      "icon": "BaiduCloud.png",
+      "headers": {
+        "server": "(?:bd-bws|yunjiasu|jsl-bd|BWS|BCN|JSL3)",
+        "x-bce-request-id": "",
+        "x-bdcdn-cache-status": ""
+      }
+    },
+    "Tengine": {
+      "cats": [22],
+      "description": "Tengine 是淘宝基于 Nginx 二次开发的高性能 Web 服务器。",
+      "website": "https://tengine.taobao.org",
+      "icon": "Tengine.png",
+      "headers": {
+        "server": "^Tengine(?:/([\\d.]+))?\\;version:\\1"
+      }
+    },
+    "OpenResty": {
+      "cats": [22],
+      "description": "OpenResty 是国人发起的基于 Nginx + Lua 的高性能 Web 平台。",
+      "website": "https://openresty.org",
+      "icon": "OpenResty.png",
+      "headers": {
+        "server": "^openresty(?:/([\\d.]+))?\\;version:\\1"
+      }
+    },
+    "WebsoftOA": {
+      "cats": [50],
+      "description": "万户网络 OA。",
+      "website": "http://www.whir.net",
+      "icon": "Whir.png",
+      "html": [
+        "<title>[^<]*万户[^<]*</title>",
+        "<title>[^<]*ezOFFICE[^<]*</title>",
+        "whir/oa"
+      ]
+    },
+    "Tower协作": {
+      "cats": [13],
+      "description": "Tower 是国内常见的项目协作工具。",
+      "website": "https://tower.im",
+      "icon": "Tower.png",
+      "html": [
+        "<title>[^<]*Tower[^<]*</title>",
+        "tower\\.im"
+      ],
+      "scriptSrc": [
+        "tower\\.im"
+      ]
+    },
+    "Teambition": {
+      "cats": [13],
+      "description": "Teambition 是阿里旗下的协作平台。",
+      "website": "https://www.teambition.com",
+      "icon": "Teambition.png",
+      "html": [
+        "<title>[^<]*Teambition[^<]*</title>",
+        "teambition\\.com"
+      ],
+      "scriptSrc": [
+        "teambition\\.com"
+      ]
+    },
+    "WordPress繁体中文": {
+      "cats": [1, 11],
+      "description": "WordPress 中文化插件 / 主题特征。",
+      "website": "https://wordpress.org",
+      "icon": "WordPress.png",
+      "html": [
+        "/wp-content/themes/(?:bgz|jingxin|begin|webstack)\\;confidence:80"
+      ],
+      "implies": ["WordPress"]
+    },
+    "Gitea中国镜像": {
+      "cats": [47],
+      "description": "Gitea 中文部署（常用于内网代码托管）。",
+      "website": "https://gitea.io",
+      "icon": "Gitea.png",
+      "html": [
+        "<title>[^<]*Gitea[^<]*</title>"
+      ],
+      "meta": {
+        "keywords": [
+          "go,git,self-hosted,gitea"
+        ]
+      },
+      "headers": {
+        "set-cookie": "i_like_gitea"
+      }
+    },
+    "Gogs": {
+      "cats": [47],
+      "description": "Gogs 是国内开发者开源的轻量级自建 Git 服务。",
+      "website": "https://gogs.io",
+      "icon": "Gogs.png",
+      "html": [
+        "<title>Gogs[^<]*</title>",
+        "<meta name=\"description\" content=\"Gogs"
+      ],
+      "headers": {
+        "set-cookie": "i_like_gogs"
+      }
+    },
+    "Coding": {
+      "cats": [47],
+      "description": "Coding（腾讯云开发者平台）。",
+      "website": "https://coding.net",
+      "icon": "Coding.png",
+      "html": [
+        "<title>[^<]*Coding[^<]*</title>",
+        "coding\\.net"
+      ]
+    },
+    "宝塔WAF": {
+      "cats": [16],
+      "description": "宝塔 Web 应用防火墙。",
+      "website": "https://www.bt.cn",
+      "icon": "BTPanel.png",
+      "html": [
+        "<title>[^<]*(?:网站防火墙|宝塔WAF)[^<]*</title>",
+        "btwaf"
+      ],
+      "headers": {
+        "server": "^btwaf",
+        "waf": "^btwaf$"
+      }
+    },
+    "安全狗": {
+      "cats": [16],
+      "description": "安全狗（Safedog）Web 防护。",
+      "website": "https://www.safedog.cn",
+      "icon": "Safedog.png",
+      "html": [
+        "<title>[^<]*(?:安全狗|Safedog)[^<]*</title>",
+        "safedogsite"
+      ],
+      "headers": {
+        "x-powered-by-safedog": "",
+        "server": "^safedog",
+        "waf": "Safedog"
+      }
+    },
+    "云锁": {
+      "cats": [16],
+      "description": "云锁（Yunsuo）服务器安全防护。",
+      "website": "https://www.yunsuo.com.cn",
+      "icon": "Yunsuo.png",
+      "html": [
+        "yunsuologo",
+        "<title>[^<]*云锁[^<]*</title>"
+      ],
+      "headers": {
+        "set-cookie": "yunsuo_session",
+        "x-powered-by-yunsuo": ""
+      }
+    },
+    "ChuangYuCDN": {
+      "cats": [31, 16],
+      "description": "知道创宇 创宇盾 CDN / 抗 D 防御。",
+      "website": "https://www.yunaq.com",
+      "icon": "Yunaq.png",
+      "headers": {
+        "server": "^yunaq",
+        "x-yunaq-from": ""
+      },
+      "cookies": {
+        "yunsuo_session_verify": ""
+      }
+    },
+    "Maxkb": {
+      "cats": [19, 4],
+      "description": "MaxKB 是飞致云开源的基于 LLM 的企业知识库。",
+      "website": "https://maxkb.cn",
+      "icon": "MaxKB.png",
+      "html": [
+        "<title>MaxKB</title>",
+        "maxkb"
+      ]
+    }
+  }
+}
