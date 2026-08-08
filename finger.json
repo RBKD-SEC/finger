@@ -1126,6 +1126,18 @@
         "/webroot/decision/finebi"
       ]
     },
+    "Fastjson": {
+      "cats": [18],
+      "description": "Fastjson 是阿里巴巴开源的 Java JSON 库（com.alibaba.fastjson）。无 HTTP 头特征，仅在应用将 fastjson 异常/版本信息回显到响应时可识别（未捕获异常、JSON 接口报错回显场景）。主动探测见 nuclei http/technologies/fastjson-version.yaml。",
+      "website": "https://github.com/alibaba/fastjson",
+      "icon": "Fastjson.png",
+      "html": [
+        "com\\.alibaba\\.fastjson\\.JSONException",
+        "fastjson-version",
+        "autoType is not support",
+        "fastjson-version.*?([0-9]+\\.[0-9]+\\.[0-9]+)\\;version:\\1"
+      ]
+    },
     "Smartbi": {
       "cats": [10],
       "description": "Smartbi 思迈特是国内自主可控的 BI 平台。",
