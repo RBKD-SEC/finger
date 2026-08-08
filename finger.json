@@ -1711,6 +1711,37 @@
         "<title>MaxKB</title>",
         "maxkb"
       ]
+    },
+    "ThinkPHP": {
+      "cats": [18],
+      "description": "ThinkPHP 是国产轻量级 PHP MVC 开发框架（常用于建站/CMS 底层）。",
+      "website": "https://www.thinkphp.cn",
+      "headers": {
+        "x-powered-by": "ThinkPHP(?:\\s([\\d.]+))?\\;version:\\1"
+      },
+      "html": [
+        "/Library/Think/",
+        "/thinkphp/library/think/",
+        "ThinkPHP</a><sup>([\\d.]+)</sup>\\;version:\\1"
+      ],
+      "implies": [
+        "PHP"
+      ]
+    },
+    "Spring Framework": {
+      "cats": [18],
+      "description": "Java Spring 框架（Spring MVC / Spring Boot），Whitelabel 错误页与 /error status 999 为典型特征。",
+      "website": "https://spring.io",
+      "html": [
+        "Whitelabel Error Page",
+        "\"status\":999"
+      ],
+      "cookies": {
+        "jsessionid": "\\;confidence:50"
+      },
+      "implies": [
+        "Java"
+      ]
     }
   }
 }
