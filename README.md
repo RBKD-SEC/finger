@@ -51,7 +51,7 @@ httpx -l urls.txt -td -cff finger.json
 
 ## 已覆盖产品
 
-当前 120 个指纹，分为以下几类：
+当前 123 个指纹，分为以下几类：
 
 ### CMS / 建站
 MetInfo、Empire CMS（帝国 CMS）、PbootCMS、74CMS（齐博）、苹果 CMS（maccms）、DouPHP、CmsEasy、SDCMS、JeecgBoot、JeeSite、RuoYi（若依）、JPress、JeeCMS、OneThink、HiShop、HDWiki、Z-BlogPHP、Typecho、Emlog、Discuz! Q、Halo。
@@ -94,6 +94,26 @@ Gitea（中文部署）、Gogs、Coding。
 
 ### 其他
 PaddlePaddle、EasyImage、ChatGLM-Web、WordPress 国产主题。
+
+## Capability catalog & release
+
+本仓库是 repository-orchestration-v2 的 `fingerprint` 能力仓。发布门禁：
+
+- 每个 `apps` key 通过 `scripts/slugs.json` 映射到稳定能力 ID。
+- `capabilities/catalog-v1.json` 仅包含 provenance 审批为 `accepted` 的资产；当前全部资产处于 `held` 待审状态，因此 catalog 为空。
+- 发布候选通过 `scripts/prepare_release.py --calver YYYY.MM.DD.N` 生成，包含 catalog、schema、LICENSE、NOTICE、provenance 与 rights report。
+- 在独立目录下载候选后运行 `scripts/verify_release.py --release releases/YYYY.MM.DD.N` 校验 digest 与 schema。
+
+本地门禁：
+
+```bash
+python scripts/validate_finger_gates.py   # schema/正则可编译/ratchet/secret 检查
+python scripts/test_finger_gates.py       # 单元测试
+python scripts/generate_catalog.py --write
+python scripts/prepare_release.py --calver 2026.08.10.1
+python scripts/verify_release.py --release releases/2026.08.10.1
+go run ./e2e/consumer_smoke
+```
 
 ## 校验
 

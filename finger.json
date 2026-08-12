@@ -10,7 +10,7 @@
       },
       "html": [
         "Powered by <a [^>]*>MetInfo</a>",
-        "content=\"MetInfo[^\"]*\"\\;version:\\1",
+        "content=\"MetInfo[^\"]*\"",
         "/templates/met/"
       ],
       "meta": {
