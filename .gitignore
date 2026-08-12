@@ -1,0 +1,22 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Release artifacts
+*.tar.gz
+*.zip
+dist/
+build/
+
+# IDE / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Local environment
+.env
+.venv/
+
+# Go artifacts
+go.sum

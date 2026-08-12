@@ -1,0 +1,26 @@
+{
+  "assets": [
+    {
+      "content_digest": "sha256:0448bda6b93e04ff48c76e6e26c057c2d8e11cf357cb24d14f5440df5c37a827",
+      "contributor_authority": "unknown",
+      "decision": "held",
+      "destination": "finger.json",
+      "modifications": "",
+      "origin_class": "unknown",
+      "provenance_id": "prov-finger-finger-json-0448bda6",
+      "reason": "pending maintainer provenance review",
+      "required_notices": [],
+      "reviewer": null,
+      "rights_basis": "unknown",
+      "source": {
+        "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "path": "unknown",
+        "revision": "unknown",
+        "url": "https://unknown"
+      },
+      "spdx": "LicenseRef-UNKNOWN"
+    }
+  ],
+  "repository": "finger",
+  "schema_version": 1
+}

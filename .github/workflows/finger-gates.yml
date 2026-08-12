@@ -1,0 +1,34 @@
+name: finger-gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.21"
+
+      - name: Install dependencies
+        run: |
+          pip install jsonschema pyyaml
+
+      - name: Validate gates
+        run: python scripts/validate_finger_gates.py
+
+      - name: Run tests
+        run: python scripts/test_finger_gates.py
+
+      - name: Consumer smoke
+        run: go run ./e2e/consumer_smoke
