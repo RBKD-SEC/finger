@@ -2385,7 +2385,7 @@
    "metadata": {
     "product": "knife4j",
     "vendor": "00_unknown",
-    "verified": true
+    "verified": false
    },
    "description": "knife4j 是基于 Swagger 的增强型 API 文档框架，入口固定为 /doc.html。"
   },
@@ -3757,7 +3757,7 @@
    "metadata": {
     "product": "swagger",
     "vendor": "00_unknown",
-    "verified": true
+    "verified": false
    },
    "description": "Swagger UI 挂在子路径（Springfox/springdoc 典型部署 /swagger-ui.html、/swagger-ui/index.html），根路径无特征的形态补充。"
   },

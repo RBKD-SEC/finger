@@ -7,7 +7,7 @@ info:
   metadata:
     product: swagger
     vendor: 00_unknown
-    verified: true
+    verified: false
   description: Swagger UI 挂在子路径（Springfox/springdoc 典型部署 /swagger-ui.html、/swagger-ui/index.html），根路径无特征的形态补充。
 http:
 - method: GET
