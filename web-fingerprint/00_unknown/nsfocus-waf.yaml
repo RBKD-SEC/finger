@@ -1,0 +1,29 @@
+id: nsfocus-waf
+info:
+  name: 绿盟WAF
+  author: P0m32Kun
+  tags: detect,tech,nsfocus-waf
+  severity: info
+  metadata:
+    product: nsfocus-waf
+    vendor: 00_unknown
+    verified: false
+  description: 绿盟科技 Web 应用防护系统（WAF）。
+  reference:
+  - https://www.nsfocus.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*NSFOCUS WAF[^<]*</title>
+    - <title>[^<]*绿盟[^<]*Web应用防护[^<]*</title>
+    - /portal/index/login
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - NSFocus WAF
+    case-insensitive: true

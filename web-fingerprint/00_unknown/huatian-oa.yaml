@@ -1,0 +1,25 @@
+id: huatian-oa
+info:
+  name: 华天动力OA
+  author: P0m32Kun
+  tags: detect,tech,huatian-oa
+  severity: info
+  metadata:
+    product: huatian-oa
+    vendor: 00_unknown
+    verified: false
+  description: 华天动力 OA 是国内常见的协同办公系统。
+  reference:
+  - https://www.oa8000.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*华天动力[^<]*</title>
+    - OA8000
+    - /htmis/
+    - /OAapp/
+    case-insensitive: true

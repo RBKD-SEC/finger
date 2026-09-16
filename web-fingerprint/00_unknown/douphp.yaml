@@ -1,0 +1,24 @@
+id: douphp
+info:
+  name: DouPHP
+  author: P0m32Kun
+  tags: detect,tech,douphp
+  severity: info
+  metadata:
+    product: douphp
+    vendor: 00_unknown
+    verified: false
+  description: DouPHP（豆豆CMS）是基于 PHP+MySQL 的轻量级企业建站系统。
+  reference:
+  - https://www.douco.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*douphp[^>]*>DouPHP</a>
+    - <!--DouPHP
+    - /install/douphp\.lock
+    case-insensitive: true

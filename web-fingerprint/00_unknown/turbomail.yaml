@@ -1,0 +1,25 @@
+id: turbomail
+info:
+  name: TurboMail
+  author: P0m32Kun
+  tags: detect,tech,turbomail
+  severity: info
+  metadata:
+    product: turbomail
+    vendor: 00_unknown
+    verified: false
+  description: TurboMail 是国内邮件系统厂商拓波软件的邮件服务系统。
+  reference:
+  - https://www.turbomail.org
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*TurboMail[^<]*</title>
+    - TurboMail邮件系统
+    - /turbomail/
+    - var turbomail
+    case-insensitive: true

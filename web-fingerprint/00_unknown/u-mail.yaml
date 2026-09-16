@@ -1,0 +1,30 @@
+id: u-mail
+info:
+  name: U-Mail
+  author: P0m32Kun
+  tags: detect,tech,u-mail
+  severity: info
+  metadata:
+    product: u-mail
+    vendor: 00_unknown
+    verified: false
+  description: U-Mail 是国内常见的企业邮件系统。
+  reference:
+  - https://www.comingchina.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*U-Mail[^<]*</title>
+    - /webmail/client/
+    - U-Mail Server
+    - umail_login
+    case-insensitive: true
+  - type: regex
+    part: x-umail
+    regex:
+    - .+
+    case-insensitive: true

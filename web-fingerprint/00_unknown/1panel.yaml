@@ -1,0 +1,30 @@
+id: 1panel
+info:
+  name: 1Panel
+  author: P0m32Kun
+  tags: detect,tech,1panel
+  severity: info
+  metadata:
+    product: 1panel
+    vendor: 00_unknown
+    verified: false
+  description: 1Panel 是飞致云开源的现代化 Linux 服务器运维管理面板。
+  reference:
+  - https://1panel.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>1Panel</title>
+    - <meta name="description" content="1Panel
+    - 1panel-favicon
+    - 1panel
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - psession
+    case-insensitive: true

@@ -1,0 +1,30 @@
+id: ruijie
+info:
+  name: 锐捷网络设备
+  author: P0m32Kun
+  tags: detect,tech,ruijie
+  severity: info
+  metadata:
+    product: ruijie
+    vendor: 00_unknown
+    verified: false
+  description: 锐捷 Ruijie 网络设备 Web 管理界面。
+  reference:
+  - https://www.ruijie.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Ruijie[^<]*</title>
+    - <title>[^<]*锐捷[^<]*</title>
+    - <title>[^<]*EWEB[^<]*</title>
+    - /eweb/js
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - Ruijie
+    case-insensitive: true

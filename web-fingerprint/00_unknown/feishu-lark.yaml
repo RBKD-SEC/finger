@@ -1,0 +1,27 @@
+id: feishu-lark
+info:
+  name: 飞书Lark
+  author: P0m32Kun
+  tags: detect,tech,feishu-lark
+  severity: info
+  metadata:
+    product: feishu-lark
+    vendor: 00_unknown
+    verified: false
+  description: 飞书 / Lark 协同办公平台。
+  reference:
+  - https://www.feishu.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:飞书|Lark)[^<]*</title>
+    - feishu\.cn
+    - larksuite
+    - sf\d-cn\.feishucdn\.com
+    - lf-package-cn\.feishucdn\.com
+    - feishu\.cn
+    case-insensitive: true

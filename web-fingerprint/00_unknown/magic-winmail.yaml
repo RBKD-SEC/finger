@@ -1,0 +1,24 @@
+id: magic-winmail
+info:
+  name: Magic Winmail
+  author: P0m32Kun
+  tags: detect,tech,magic-winmail
+  severity: info
+  metadata:
+    product: magic-winmail
+    vendor: 00_unknown
+    verified: false
+  description: Magic Winmail Server 是国内常见的邮件系统。
+  reference:
+  - https://www.magicwinmail.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:Winmail|Magic Winmail)[^<]*</title>
+    - Winmail Server
+    - /admin/login\.php\?lang=
+    case-insensitive: true

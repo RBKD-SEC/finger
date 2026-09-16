@@ -1,0 +1,29 @@
+id: wecenter
+info:
+  name: WeCenter
+  author: P0m32Kun
+  tags: detect,tech,wecenter
+  severity: info
+  metadata:
+    product: wecenter
+    vendor: 00_unknown
+    verified: false
+  description: WeCenter 是国内开源的社交化知识社区系统。
+  reference:
+  - https://www.wecenter.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*wecenter[^>]*>WeCenter</a>
+    - <meta name="description" content="[^"]*WeCenter
+    - /static/wecenter
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - _wecenter_session
+    case-insensitive: true

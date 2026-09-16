@@ -1,0 +1,49 @@
+id: jiasule
+info:
+  name: 加速乐Jiasule
+  author: P0m32Kun
+  tags: detect,tech,jiasule
+  severity: info
+  metadata:
+    product: jiasule
+    vendor: 00_unknown
+    verified: false
+  description: 知道创宇加速乐 CDN/WAF。
+  reference:
+  - https://www.jiasule.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>jiasule
+    - jsl_clearance
+    - /cdn-cgi/jiasule
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - jsl/
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - (?:__jsluid|__jsl_clearance|jsluid_h)
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - __jsluid_h
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - __jsl_clearance_s
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - __jsl_clearance
+    case-insensitive: true

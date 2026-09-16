@@ -1,0 +1,24 @@
+id: websoftoa
+info:
+  name: WebsoftOA
+  author: P0m32Kun
+  tags: detect,tech,websoftoa
+  severity: info
+  metadata:
+    product: websoftoa
+    vendor: 00_unknown
+    verified: false
+  description: 万户网络 OA。
+  reference:
+  - http://www.whir.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*万户[^<]*</title>
+    - <title>[^<]*ezOFFICE[^<]*</title>
+    - whir/oa
+    case-insensitive: true

@@ -1,0 +1,23 @@
+id: openresty
+info:
+  name: OpenResty
+  author: P0m32Kun
+  tags: detect,tech,openresty
+  severity: info
+  metadata:
+    product: openresty
+    vendor: 00_unknown
+    verified: false
+  description: OpenResty 是国人发起的基于 Nginx + Lua 的高性能 Web 平台。
+  reference:
+  - https://openresty.org
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - ^openresty(?:/([\d.]+))?
+    case-insensitive: true

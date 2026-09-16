@@ -1,0 +1,24 @@
+id: hdwiki
+info:
+  name: HDWiki
+  author: P0m32Kun
+  tags: detect,tech,hdwiki
+  severity: info
+  metadata:
+    product: hdwiki
+    vendor: 00_unknown
+    verified: false
+  description: HDWiki 是互动百科开源的中文 wiki 系统。
+  reference:
+  - https://kaiyuan.hudong.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*>HDWiki</a>
+    - /hdwiki/
+    - <meta name="generator" content="HDWiki
+    case-insensitive: true

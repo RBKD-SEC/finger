@@ -1,0 +1,30 @@
+id: h3c
+info:
+  name: H3C设备
+  author: P0m32Kun
+  tags: detect,tech,h3c
+  severity: info
+  metadata:
+    product: h3c
+    vendor: 00_unknown
+    verified: false
+  description: 新华三 H3C 网络设备 Web 管理界面。
+  reference:
+  - https://www.h3c.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*H3C[^<]*</title>
+    - /wcn/frame/login\.html
+    - H3C Web Login
+    - src="/images/H3C_
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ^h3c
+    case-insensitive: true

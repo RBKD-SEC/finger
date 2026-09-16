@@ -1,0 +1,25 @@
+id: yonyou-u8
+info:
+  name: 用友U8
+  author: P0m32Kun
+  tags: detect,tech,yonyou-u8
+  severity: info
+  metadata:
+    product: yonyou-u8
+    vendor: 00_unknown
+    verified: false
+  description: 用友 U8 是面向中型企业的 ERP 软件。
+  reference:
+  - https://www.yonyou.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*U8[^<]*</title>
+    - /U8Web/
+    - U8Login
+    - U8\.UFIDA\.
+    case-insensitive: true

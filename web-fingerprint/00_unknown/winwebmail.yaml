@@ -1,0 +1,24 @@
+id: winwebmail
+info:
+  name: WinWebMail
+  author: P0m32Kun
+  tags: detect,tech,winwebmail
+  severity: info
+  metadata:
+    product: winwebmail
+    vendor: 00_unknown
+    verified: false
+  description: WinWebMail 是国内常见的 Windows 平台邮件系统。
+  reference:
+  - http://www.winwebmail.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*WinWebMail[^<]*</title>
+    - /admin/help/winwebmail
+    - WinWebMail Server
+    case-insensitive: true

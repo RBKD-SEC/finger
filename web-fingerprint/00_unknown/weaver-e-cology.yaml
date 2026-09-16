@@ -1,0 +1,38 @@
+id: weaver-e-cology
+info:
+  name: 泛微e-cology
+  author: P0m32Kun
+  tags: detect,tech,weaver-e-cology
+  severity: info
+  metadata:
+    product: weaver-e-cology
+    vendor: 00_unknown
+    verified: false
+  description: 泛微 e-cology 是国内大型企业广泛使用的协同办公平台。
+  reference:
+  - https://www.weaver.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:泛微|e-cology|ecology)[^<]*</title>
+    - /wui/theme/
+    - /wui/index\.html
+    - weaver\.common\.
+    - ecology_JSessionid
+    - /js/weaver\.
+    - /wui/common/
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - ecology_JSessionid
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - loginPageURL
+    case-insensitive: true

@@ -1,0 +1,24 @@
+id: shimo-docs
+info:
+  name: 石墨文档
+  author: P0m32Kun
+  tags: detect,tech,shimo-docs
+  severity: info
+  metadata:
+    product: shimo-docs
+    vendor: 00_unknown
+    verified: false
+  description: 石墨文档（Shimo）在线协作文档。
+  reference:
+  - https://shimo.im
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*石墨[^<]*</title>
+    - shimo\.im
+    - shimo\.im
+    case-insensitive: true

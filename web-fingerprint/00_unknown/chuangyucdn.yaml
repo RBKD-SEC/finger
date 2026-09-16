@@ -1,0 +1,33 @@
+id: chuangyucdn
+info:
+  name: ChuangYuCDN
+  author: P0m32Kun
+  tags: detect,tech,chuangyucdn
+  severity: info
+  metadata:
+    product: chuangyucdn
+    vendor: 00_unknown
+    verified: false
+  description: 知道创宇 创宇盾 CDN / 抗 D 防御。
+  reference:
+  - https://www.yunaq.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - ^yunaq
+    case-insensitive: true
+  - type: regex
+    part: x-yunaq-from
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - yunsuo_session_verify
+    case-insensitive: true

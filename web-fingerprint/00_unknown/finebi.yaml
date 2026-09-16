@@ -1,0 +1,28 @@
+id: finebi
+info:
+  name: FineBI
+  author: P0m32Kun
+  tags: detect,tech,finebi
+  severity: info
+  metadata:
+    product: finebi
+    vendor: 00_unknown
+    verified: false
+  description: FineBI（帆软 BI）是国内主流的企业级商业智能平台。
+  reference:
+  - https://www.finebi.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*FineBI[^<]*</title>
+    - <title>[^<]*帆软BI[^<]*</title>
+    - /webroot/decision/login
+    - BI\.Decision
+    - fine-bi
+    - fine-bi
+    - /webroot/decision/finebi
+    case-insensitive: true

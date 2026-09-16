@@ -1,0 +1,42 @@
+id: jumpserver
+info:
+  name: JumpServer
+  author: P0m32Kun
+  tags: detect,tech,jumpserver
+  severity: info
+  metadata:
+    product: jumpserver
+    vendor: 00_unknown
+    verified: false
+  description: JumpServer 是飞致云开源的多云堡垒机/PAM 平台。
+  reference:
+  - https://www.jumpserver.org
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>JumpServer</title>
+    - <meta name="keywords" content="JumpServer
+    - src="/static/img/logo[^"]*\.png"
+    - jumpserver-js
+    - /static/js/jumpserver
+    - /static/applets/
+    case-insensitive: true
+  - type: regex
+    part: x-jms-
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - jms_csrftoken
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - jumpserver_csrftoken
+    case-insensitive: true

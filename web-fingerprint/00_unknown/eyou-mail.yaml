@@ -1,0 +1,30 @@
+id: eyou-mail
+info:
+  name: 亿邮邮件系统
+  author: P0m32Kun
+  tags: detect,tech,eyou-mail
+  severity: info
+  metadata:
+    product: eyou-mail
+    vendor: 00_unknown
+    verified: false
+  description: 亿邮（Eyou）邮件系统是国内常见的企业邮件平台。
+  reference:
+  - https://www.eyou.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*亿邮[^<]*</title>
+    - <title>[^<]*eYou[^<]*</title>
+    - /webmail/eyou
+    - eyou_session
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - eyou_session
+    case-insensitive: true

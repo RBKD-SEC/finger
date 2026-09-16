@@ -1,0 +1,36 @@
+id: coremail
+info:
+  name: Coremail
+  author: P0m32Kun
+  tags: detect,tech,coremail
+  severity: info
+  metadata:
+    product: coremail
+    vendor: 00_unknown
+    verified: false
+  description: Coremail 是国内主流的邮件系统（论客）。
+  reference:
+  - https://www.coremail.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:Coremail|论客)[^<]*</title>
+    - Coremail XT
+    - /coremail/common/
+    - /coremail/index
+    - /coremail/
+    case-insensitive: true
+  - type: regex
+    part: x-coremail
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: x-cm-transid
+    regex:
+    - .+
+    case-insensitive: true

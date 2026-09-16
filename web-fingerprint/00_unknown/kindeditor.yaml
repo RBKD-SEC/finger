@@ -1,0 +1,24 @@
+id: kindeditor
+info:
+  name: KindEditor
+  author: P0m32Kun
+  tags: detect,tech,kindeditor
+  severity: info
+  metadata:
+    product: kindeditor
+    vendor: 00_unknown
+    verified: false
+  description: KindEditor 是国内常见的开源 HTML 富文本编辑器。
+  reference:
+  - http://kindeditor.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <script[^>]*kindeditor(?:-min)?\.js[^>]*></script>
+    - /kindeditor(?:-all)?(?:-min)?\.js
+    - kindeditor/themes/
+    case-insensitive: true

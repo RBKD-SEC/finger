@@ -1,0 +1,24 @@
+id: discuz-q
+info:
+  name: Discuz! Q
+  author: P0m32Kun
+  tags: detect,tech,discuz-q
+  severity: info
+  metadata:
+    product: discuz-q
+    vendor: 00_unknown
+    verified: false
+  description: Discuz! Q 是腾讯开源的下一代社区系统。
+  reference:
+  - https://discuz.chat
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Discuz! Q[^<]*</title>
+    - Powered by <a [^>]*>Discuz! Q</a>
+    - /discuz-q/
+    case-insensitive: true

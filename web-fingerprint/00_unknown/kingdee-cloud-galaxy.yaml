@@ -1,0 +1,27 @@
+id: kingdee-cloud-galaxy
+info:
+  name: 金蝶云·星空
+  author: P0m32Kun
+  tags: detect,tech,kingdee-cloud-galaxy
+  severity: info
+  metadata:
+    product: kingdee-cloud-galaxy
+    vendor: 00_unknown
+    verified: false
+  description: 金蝶云·星空（K/3 Cloud）是金蝶面向中大型企业的云 ERP。
+  reference:
+  - https://www.kingdee.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:K/3 Cloud|K3Cloud|金蝶云·星空)[^<]*</title>
+    - /k3cloud/
+    - /kdsvc/login
+    - Kingdee\.BOS
+    - /k3cloud/
+    - /kdsvc/
+    case-insensitive: true

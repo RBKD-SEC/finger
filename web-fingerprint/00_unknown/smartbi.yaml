@@ -1,0 +1,26 @@
+id: smartbi
+info:
+  name: Smartbi
+  author: P0m32Kun
+  tags: detect,tech,smartbi
+  severity: info
+  metadata:
+    product: smartbi
+    vendor: 00_unknown
+    verified: false
+  description: Smartbi 思迈特是国内自主可控的 BI 平台。
+  reference:
+  - https://www.smartbi.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Smartbi[^<]*</title>
+    - <title>[^<]*思迈特[^<]*</title>
+    - /smartbi/vision/
+    - smartbi\.SystemInit
+    - /smartbi/vision/
+    case-insensitive: true

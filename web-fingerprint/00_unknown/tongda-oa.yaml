@@ -1,0 +1,28 @@
+id: tongda-oa
+info:
+  name: 通达OA
+  author: P0m32Kun
+  tags: detect,tech,tongda-oa
+  severity: info
+  metadata:
+    product: tongda-oa
+    vendor: 00_unknown
+    verified: false
+  description: 通达 OA（TongdaOA / 通达信科）是国内常见的办公自动化系统。
+  reference:
+  - https://www.tongda2000.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*通达[^<]*</title>
+    - <title>[^<]*Office Anywhere[^<]*</title>
+    - /static/images/tongda\.gif
+    - /inc/common\.js\?ver=
+    - TongDa OA
+    - /inc/common\.js
+    - /static/js/inc/
+    case-insensitive: true

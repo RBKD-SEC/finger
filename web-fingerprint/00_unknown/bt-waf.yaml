@@ -1,0 +1,33 @@
+id: bt-waf
+info:
+  name: 宝塔WAF
+  author: P0m32Kun
+  tags: detect,tech,bt-waf
+  severity: info
+  metadata:
+    product: bt-waf
+    vendor: 00_unknown
+    verified: false
+  description: 宝塔 Web 应用防火墙。
+  reference:
+  - https://www.bt.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:网站防火墙|宝塔WAF)[^<]*</title>
+    - btwaf
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ^btwaf
+    case-insensitive: true
+  - type: regex
+    part: waf
+    regex:
+    - ^btwaf$
+    case-insensitive: true

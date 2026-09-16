@@ -1,0 +1,24 @@
+id: metersphere
+info:
+  name: MeterSphere
+  author: P0m32Kun
+  tags: detect,tech,metersphere
+  severity: info
+  metadata:
+    product: metersphere
+    vendor: 00_unknown
+    verified: false
+  description: MeterSphere 是飞致云开源的一站式测试平台。
+  reference:
+  - https://metersphere.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>MeterSphere</title>
+    - metersphere-favicon
+    - /metersphere/
+    case-insensitive: true

@@ -1,0 +1,29 @@
+id: uniview
+info:
+  name: 宇视科技
+  author: P0m32Kun
+  tags: detect,tech,uniview
+  severity: info
+  metadata:
+    product: uniview
+    vendor: 00_unknown
+    verified: false
+  description: 宇视科技 Uniview 摄像机 / NVR Web 管理界面。
+  reference:
+  - https://www.uniview.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Uniview[^<]*</title>
+    - uniview\.js
+    - /LAPI/V1\.0/
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - uc-httpd
+    case-insensitive: true

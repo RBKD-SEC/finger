@@ -1,0 +1,28 @@
+id: seeyon-oa
+info:
+  name: 致远OA
+  author: P0m32Kun
+  tags: detect,tech,seeyon-oa
+  severity: info
+  metadata:
+    product: seeyon-oa
+    vendor: 00_unknown
+    verified: false
+  description: 致远互联 OA（Seeyon / A6 / A8 / G6）是国内主流的协同办公系统。
+  reference:
+  - https://www.seeyon.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:致远|Seeyon|seeyon)[^<]*</title>
+    - /seeyon/common/
+    - /seeyon/USER-DATA/IMAGES/
+    - var _ctxPath = "/seeyon"
+    - Seeyon Software
+    - /seeyon/main\.do
+    - /seeyon/common/js/
+    case-insensitive: true

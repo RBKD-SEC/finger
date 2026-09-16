@@ -1,0 +1,37 @@
+id: hikvision
+info:
+  name: 海康威视
+  author: P0m32Kun
+  tags: detect,tech,hikvision
+  severity: info
+  metadata:
+    product: hikvision
+    vendor: 00_unknown
+    verified: false
+  description: 海康威视 Hikvision 摄像机 / NVR / DVR Web 管理界面。
+  reference:
+  - https://www.hikvision.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - /doc/page/login\.asp
+    - /doc/ui/locale/
+    - /SDK/webLanguage
+    - App-WebViewer
+    - Hikvision-Webs
+    - /SDK/web
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - (?:App-webs|webserver|DNVRS-Webs|Hikvision-Webs)
+    case-insensitive: true
+  - type: regex
+    part: www-authenticate
+    regex:
+    - (?i)Hikvision
+    case-insensitive: true

@@ -1,0 +1,23 @@
+id: upyun-cdn
+info:
+  name: 又拍云CDN
+  author: P0m32Kun
+  tags: detect,tech,upyun-cdn
+  severity: info
+  metadata:
+    product: upyun-cdn
+    vendor: 00_unknown
+    verified: false
+  description: 又拍云 UPYUN CDN/对象存储。
+  reference:
+  - https://www.upyun.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - (?:marco|UPYUN|nginx-upyun|tengine/upyun)
+    case-insensitive: true

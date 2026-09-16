@@ -1,0 +1,30 @@
+id: dahua
+info:
+  name: 大华股份
+  author: P0m32Kun
+  tags: detect,tech,dahua
+  severity: info
+  metadata:
+    product: dahua
+    vendor: 00_unknown
+    verified: false
+  description: 大华 Dahua 摄像机 / NVR / DVR Web 管理界面。
+  reference:
+  - https://www.dahuatech.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - /RPC2_Login
+    - /current_config/Account
+    - Dahua\.LoginCommon
+    - DhWeb\.js
+    case-insensitive: true
+  - type: regex
+    part: www-authenticate
+    regex:
+    - (?i)Dahua
+    case-insensitive: true

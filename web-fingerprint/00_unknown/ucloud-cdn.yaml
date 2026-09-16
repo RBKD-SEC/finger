@@ -1,0 +1,28 @@
+id: ucloud-cdn
+info:
+  name: UCloud CDN
+  author: P0m32Kun
+  tags: detect,tech,ucloud-cdn
+  severity: info
+  metadata:
+    product: ucloud-cdn
+    vendor: 00_unknown
+    verified: false
+  description: UCloud 优刻得 CDN。
+  reference:
+  - https://www.ucloud.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: x-ucdn-cache
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ucloud
+    case-insensitive: true

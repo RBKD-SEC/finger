@@ -1,0 +1,22 @@
+id: chatglm-web
+info:
+  name: ChatGLM-Web
+  author: P0m32Kun
+  tags: detect,tech,chatglm-web
+  severity: info
+  metadata:
+    product: chatglm-web
+    vendor: 00_unknown
+    verified: false
+  description: 智谱 ChatGLM Web 推理界面。
+  reference:
+  - https://www.zhipuai.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*ChatGLM[^<]*</title>
+    case-insensitive: true

@@ -1,0 +1,29 @@
+id: huawei-usg
+info:
+  name: 华为USG
+  author: P0m32Kun
+  tags: detect,tech,huawei-usg
+  severity: info
+  metadata:
+    product: huawei-usg
+    vendor: 00_unknown
+    verified: false
+  description: 华为 USG 系列防火墙 / 网关设备。
+  reference:
+  - https://www.huawei.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*USG\d+[^<]*</title>
+    - <title>[^<]*Huawei[^<]*USG[^<]*</title>
+    - /eweb/dist/index\.html
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ^Huawei[^/]*
+    case-insensitive: true

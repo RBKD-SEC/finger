@@ -1,0 +1,25 @@
+id: showdoc
+info:
+  name: ShowDoc
+  author: P0m32Kun
+  tags: detect,tech,showdoc
+  severity: info
+  metadata:
+    product: showdoc
+    vendor: 00_unknown
+    verified: false
+  description: ShowDoc 是国内开源的接口/API/技术文档工具。
+  reference:
+  - https://www.showdoc.cc
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*ShowDoc[^<]*</title>
+    - showdoc
+    - /static/showdoc
+    - showdoc
+    case-insensitive: true

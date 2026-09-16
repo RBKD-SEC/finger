@@ -1,0 +1,33 @@
+id: chinacache
+info:
+  name: ChinaCache
+  author: P0m32Kun
+  tags: detect,tech,chinacache
+  severity: info
+  metadata:
+    product: chinacache
+    vendor: 00_unknown
+    verified: false
+  description: 蓝汛 ChinaCache CDN。
+  reference:
+  - https://www.chinacache.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: powered-by-chinacache
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ChinaCache
+    case-insensitive: true
+  - type: regex
+    part: x-via
+    regex:
+    - '[^,]*ChinaCache'
+    case-insensitive: true

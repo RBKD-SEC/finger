@@ -1,0 +1,26 @@
+id: xiaoe-tech
+info:
+  name: 小鹅通
+  author: P0m32Kun
+  tags: detect,tech,xiaoe-tech
+  severity: info
+  metadata:
+    product: xiaoe-tech
+    vendor: 00_unknown
+    verified: false
+  description: 小鹅通是国内常见的知识付费/教学 SaaS 平台。
+  reference:
+  - https://www.xiaoe-tech.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*小鹅通[^<]*</title>
+    - xiaoe-tech\.com
+    - xeknow
+    - xiaoeknow\.com
+    - xiaoe-tech\.com
+    case-insensitive: true

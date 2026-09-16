@@ -1,0 +1,24 @@
+id: emlog
+info:
+  name: Emlog
+  author: P0m32Kun
+  tags: detect,tech,emlog
+  severity: info
+  metadata:
+    product: emlog
+    vendor: 00_unknown
+    verified: false
+  description: Emlog 是国内开源的轻量级 PHP 博客与建站系统。
+  reference:
+  - https://www.emlog.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*emlog[^>]*>Emlog</a>
+    - <meta name="generator" content="emlog
+    - /content/templates/[^/]+/main\.css
+    case-insensitive: true

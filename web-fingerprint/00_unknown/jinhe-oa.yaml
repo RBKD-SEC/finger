@@ -1,0 +1,26 @@
+id: jinhe-oa
+info:
+  name: 金和OA
+  author: P0m32Kun
+  tags: detect,tech,jinhe-oa
+  severity: info
+  metadata:
+    product: jinhe-oa
+    vendor: 00_unknown
+    verified: false
+  description: 金和 OA（C6 / JC6）是国内的协同办公平台。
+  reference:
+  - https://www.jinher.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*金和[^<]*</title>
+    - <title>[^<]*JinherOA[^<]*</title>
+    - Jinher\.OA
+    - /C6/JHSoft\.
+    - /C6/Jhsoft\.Web
+    case-insensitive: true

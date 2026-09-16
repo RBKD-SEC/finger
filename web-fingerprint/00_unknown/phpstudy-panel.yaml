@@ -1,0 +1,24 @@
+id: phpstudy-panel
+info:
+  name: phpStudy小皮面板
+  author: P0m32Kun
+  tags: detect,tech,phpstudy-panel
+  severity: info
+  metadata:
+    product: phpstudy-panel
+    vendor: 00_unknown
+    verified: false
+  description: 小皮面板（phpStudy）国内常见的开发环境/服务器面板。
+  reference:
+  - https://www.xp.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*小皮[^<]*</title>
+    - <title>[^<]*phpStudy[^<]*</title>
+    - xiaopi
+    case-insensitive: true

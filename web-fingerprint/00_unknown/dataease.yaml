@@ -1,0 +1,25 @@
+id: dataease
+info:
+  name: DataEase
+  author: P0m32Kun
+  tags: detect,tech,dataease
+  severity: info
+  metadata:
+    product: dataease
+    vendor: 00_unknown
+    verified: false
+  description: DataEase 是飞致云开源的国产数据可视化分析工具。
+  reference:
+  - https://dataease.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>DataEase</title>
+    - <meta name="description" content="DataEase
+    - dataease-favicon
+    - /dataease/
+    case-insensitive: true

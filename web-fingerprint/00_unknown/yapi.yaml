@@ -1,0 +1,34 @@
+id: yapi
+info:
+  name: YApi
+  author: P0m32Kun
+  tags: detect,tech,yapi
+  severity: info
+  metadata:
+    product: yapi
+    vendor: 00_unknown
+    verified: false
+  description: YApi 是去哪儿网开源的可视化 API 管理平台。
+  reference:
+  - https://github.com/YMFE/yapi
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>YApi[^<]*</title>
+    - yapi-cli
+    - /static/prd/index\.js
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - _yapi_token
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - _yapi_uid
+    case-insensitive: true

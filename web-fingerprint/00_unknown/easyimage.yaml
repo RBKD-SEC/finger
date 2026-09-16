@@ -1,0 +1,24 @@
+id: easyimage
+info:
+  name: EasyImage
+  author: P0m32Kun
+  tags: detect,tech,easyimage
+  severity: info
+  metadata:
+    product: easyimage
+    vendor: 00_unknown
+    verified: false
+  description: EasyImage 简单图床是国内常见的开源图床程序。
+  reference:
+  - https://github.com/icret/EasyImages2.0
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*简单图床[^<]*</title>
+    - <title>EasyImage[^<]*</title>
+    - easyimage
+    case-insensitive: true

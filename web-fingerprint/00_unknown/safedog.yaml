@@ -1,0 +1,38 @@
+id: safedog
+info:
+  name: 安全狗
+  author: P0m32Kun
+  tags: detect,tech,safedog
+  severity: info
+  metadata:
+    product: safedog
+    vendor: 00_unknown
+    verified: false
+  description: 安全狗（Safedog）Web 防护。
+  reference:
+  - https://www.safedog.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:安全狗|Safedog)[^<]*</title>
+    - safedogsite
+    case-insensitive: true
+  - type: regex
+    part: x-powered-by-safedog
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ^safedog
+    case-insensitive: true
+  - type: regex
+    part: waf
+    regex:
+    - Safedog
+    case-insensitive: true

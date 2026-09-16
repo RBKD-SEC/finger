@@ -1,0 +1,25 @@
+id: sangfor-ac
+info:
+  name: 深信服AC
+  author: P0m32Kun
+  tags: detect,tech,sangfor-ac
+  severity: info
+  metadata:
+    product: sangfor-ac
+    vendor: 00_unknown
+    verified: false
+  description: 深信服 AC（上网行为管理）。
+  reference:
+  - https://www.sangfor.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*SANGFOR(?:[^<]* )?AC[^<]*</title>
+    - <title>[^<]*上网行为管理[^<]*</title>
+    - Sangfor SANGFOR Internet Access Management
+    - /ac_portal/login\.php
+    case-insensitive: true

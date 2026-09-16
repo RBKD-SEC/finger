@@ -1,0 +1,24 @@
+id: ueditor
+info:
+  name: UEditor
+  author: P0m32Kun
+  tags: detect,tech,ueditor
+  severity: info
+  metadata:
+    product: ueditor
+    vendor: 00_unknown
+    verified: false
+  description: UEditor 是百度开源的开源 HTML 富文本编辑器。
+  reference:
+  - https://fex.baidu.com/ueditor/
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <script[^>]*ueditor(?:\.all)?(?:\.min)?\.js[^>]*></script>
+    - /ueditor/(?:ueditor|third-party)
+    - ueditor\.all(?:\.min)?\.js
+    case-insensitive: true

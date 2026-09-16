@@ -1,0 +1,22 @@
+id: wordpress-zh-tw
+info:
+  name: WordPress繁体中文
+  author: P0m32Kun
+  tags: detect,tech,wordpress-zh-tw
+  severity: info
+  metadata:
+    product: wordpress-zh-tw
+    vendor: 00_unknown
+    verified: false
+  description: WordPress 中文化插件 / 主题特征。
+  reference:
+  - https://wordpress.org
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - /wp-content/themes/(?:bgz|jingxin|begin|webstack)
+    case-insensitive: true

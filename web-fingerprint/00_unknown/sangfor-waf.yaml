@@ -1,0 +1,22 @@
+id: sangfor-waf
+info:
+  name: 深信服WAF
+  author: P0m32Kun
+  tags: detect,tech,sangfor-waf
+  severity: info
+  metadata:
+    product: sangfor-waf
+    vendor: 00_unknown
+    verified: false
+  description: 深信服 WAF（Web 应用防火墙）。
+  reference:
+  - https://www.sangfor.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*SANGFOR(?:[^<]* )?WAF[^<]*</title>
+    case-insensitive: true

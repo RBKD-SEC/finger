@@ -1,0 +1,26 @@
+id: dingtalk-open-platform
+info:
+  name: 钉钉开放平台
+  author: P0m32Kun
+  tags: detect,tech,dingtalk-open-platform
+  severity: info
+  metadata:
+    product: dingtalk-open-platform
+    vendor: 00_unknown
+    verified: false
+  description: 钉钉（DingTalk）开放平台 Web 应用。
+  reference:
+  - https://open.dingtalk.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*钉钉[^<]*</title>
+    - dingtalk-jsbridge
+    - dd-static
+    - g\.alicdn\.com/dingding/
+    - ddapi
+    case-insensitive: true

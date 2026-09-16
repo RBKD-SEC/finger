@@ -1,0 +1,28 @@
+id: ruoyi
+info:
+  name: RuoYi
+  author: P0m32Kun
+  tags: detect,tech,ruoyi
+  severity: info
+  metadata:
+    product: ruoyi
+    vendor: 00_unknown
+    verified: false
+  description: RuoYi（若依）是基于 Spring Boot/Vue 的开源后台权限管理系统。
+  reference:
+  - https://ruoyi.vip
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>RuoYi[^<]*</title>
+    - <title>若依[^<]*</title>
+    - 若依管理系统
+    - ruoyi-admin
+    - Copyright &copy; [\d-]+ <a [^>]*>ruoyi\.vip</a>
+    - /ruoyi/
+    - ruoyi\.js
+    case-insensitive: true

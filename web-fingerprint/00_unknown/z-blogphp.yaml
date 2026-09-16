@@ -1,0 +1,25 @@
+id: z-blogphp
+info:
+  name: Z-BlogPHP
+  author: P0m32Kun
+  tags: detect,tech,z-blogphp
+  severity: info
+  metadata:
+    product: z-blogphp
+    vendor: 00_unknown
+    verified: false
+  description: Z-BlogPHP 是国内常见的 PHP 博客建站系统。
+  reference:
+  - https://www.zblogcn.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <meta name="generator" content="Z-BlogPHP
+    - Powered by <a [^>]*zblogcn[^>]*>Z-BlogPHP</a>
+    - /zb_users/theme/
+    - /zb_system/
+    case-insensitive: true

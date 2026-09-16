@@ -1,0 +1,26 @@
+id: fastjson
+info:
+  name: Fastjson
+  author: P0m32Kun
+  tags: detect,tech,fastjson
+  severity: info
+  metadata:
+    product: fastjson
+    vendor: 00_unknown
+    verified: false
+  description: Fastjson 是阿里巴巴开源的 Java JSON 库（com.alibaba.fastjson）。无 HTTP 头特征，仅在应用将 fastjson 异常/版本信息回显到响应时可识别（未捕获异常、JSON
+    接口报错回显场景）。主动探测见 nuclei http/technologies/fastjson-version.yaml。
+  reference:
+  - https://github.com/alibaba/fastjson
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - com\.alibaba\.fastjson\.JSONException
+    - fastjson-version
+    - autoType is not support
+    - fastjson-version.*?([0-9]+\.[0-9]+\.[0-9]+)
+    case-insensitive: true

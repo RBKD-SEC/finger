@@ -1,0 +1,26 @@
+id: kingsoft-docs
+info:
+  name: 金山文档
+  author: P0m32Kun
+  tags: detect,tech,kingsoft-docs
+  severity: info
+  metadata:
+    product: kingsoft-docs
+    vendor: 00_unknown
+    verified: false
+  description: 金山文档（WPS Docs）在线协作文档。
+  reference:
+  - https://www.kdocs.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*金山文档[^<]*</title>
+    - kdocs\.cn
+    - wps365
+    - res\.wps\.cn
+    - kdocs\.cn
+    case-insensitive: true

@@ -1,0 +1,23 @@
+id: maccms
+info:
+  name: 苹果CMS
+  author: P0m32Kun
+  tags: detect,tech,maccms
+  severity: info
+  metadata:
+    product: maccms
+    vendor: 00_unknown
+    verified: false
+  description: 苹果 CMS（maccms）是国内常见的 PHP 视频内容管理系统。
+  reference:
+  - https://www.maccms.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - /template/[^/]+/(?:html|css|js)/maccms
+    - <a [^>]*>maccms[^<]*</a>
+    case-insensitive: true

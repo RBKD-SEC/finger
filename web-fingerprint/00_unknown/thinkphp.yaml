@@ -1,0 +1,29 @@
+id: thinkphp
+info:
+  name: ThinkPHP
+  author: P0m32Kun
+  tags: detect,tech,thinkphp
+  severity: info
+  metadata:
+    product: thinkphp
+    vendor: 00_unknown
+    verified: false
+  description: ThinkPHP 是国产轻量级 PHP MVC 开发框架（常用于建站/CMS 底层）。
+  reference:
+  - https://www.thinkphp.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - /Library/Think/
+    - /thinkphp/library/think/
+    - ThinkPHP</a><sup>([\d.]+)</sup>
+    case-insensitive: true
+  - type: regex
+    part: x-powered-by
+    regex:
+    - ThinkPHP(?:\s([\d.]+))?
+    case-insensitive: true

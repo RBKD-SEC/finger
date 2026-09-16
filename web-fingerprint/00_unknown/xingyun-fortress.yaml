@@ -1,0 +1,23 @@
+id: xingyun-fortress
+info:
+  name: 行云堡垒
+  author: P0m32Kun
+  tags: detect,tech,xingyun-fortress
+  severity: info
+  metadata:
+    product: xingyun-fortress
+    vendor: 00_unknown
+    verified: false
+  description: 行云堡垒（XingYun Bastion）。
+  reference:
+  - https://www.xingyuncloud.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*行云堡垒[^<]*</title>
+    - xingyun_bastion
+    case-insensitive: true

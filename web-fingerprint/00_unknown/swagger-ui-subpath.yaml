@@ -1,0 +1,23 @@
+id: swagger-ui-subpath
+info:
+  name: swagger-ui-subpath
+  author: P0m32Kun
+  tags: detect,tech,swagger
+  severity: info
+  metadata:
+    product: swagger
+    vendor: 00_unknown
+    verified: true
+  description: Swagger UI 挂在子路径（Springfox/springdoc 典型部署 /swagger-ui.html、/swagger-ui/index.html），根路径无特征的形态补充。
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/swagger-ui.html'
+  - '{{BaseURL}}/swagger-ui/index.html'
+  matchers:
+  - type: word
+    words:
+    - swagger-ui.css
+    - swagger-ui-bundle.js
+    condition: or
+    case-insensitive: true

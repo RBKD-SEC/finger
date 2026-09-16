@@ -1,0 +1,26 @@
+id: wecom
+info:
+  name: 企业微信
+  author: P0m32Kun
+  tags: detect,tech,wecom
+  severity: info
+  metadata:
+    product: wecom
+    vendor: 00_unknown
+    verified: false
+  description: 企业微信（WeCom）相关网页。
+  reference:
+  - https://work.weixin.qq.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*企业微信[^<]*</title>
+    - work\.weixin\.qq\.com
+    - wwapi
+    - wwcdn\.weixin\.qq\.com
+    - work\.weixin\.qq\.com
+    case-insensitive: true

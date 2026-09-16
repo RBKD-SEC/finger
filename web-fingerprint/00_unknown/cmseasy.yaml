@@ -1,0 +1,24 @@
+id: cmseasy
+info:
+  name: CmsEasy
+  author: P0m32Kun
+  tags: detect,tech,cmseasy
+  severity: info
+  metadata:
+    product: cmseasy
+    vendor: 00_unknown
+    verified: false
+  description: CmsEasy 是国内一款基于 PHP 的开源企业建站系统。
+  reference:
+  - https://www.cmseasy.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*cmseasy[^>]*>CmsEasy</a>
+    - /cmseasy/data/
+    - <!-- Powered by CmsEasy
+    case-insensitive: true

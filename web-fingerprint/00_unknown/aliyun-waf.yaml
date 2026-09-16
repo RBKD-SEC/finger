@@ -1,0 +1,48 @@
+id: aliyun-waf
+info:
+  name: 阿里云WAF
+  author: P0m32Kun
+  tags: detect,tech,aliyun-waf
+  severity: info
+  metadata:
+    product: aliyun-waf
+    vendor: 00_unknown
+    verified: false
+  description: 阿里云 Web 应用防火墙。
+  reference:
+  - https://www.aliyun.com/product/waf
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Aliyun Security[^<]*</title>
+    - errors\.aliyun\.com
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - (?:aliyungf_tc|acw_tc|acw_sc__v2|acw_sc__v3)
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - aliyungf_tc
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - acw_tc
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - acw_sc__v2
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - acw_sc__v3
+    case-insensitive: true

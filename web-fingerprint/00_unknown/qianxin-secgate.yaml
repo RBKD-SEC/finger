@@ -1,0 +1,23 @@
+id: qianxin-secgate
+info:
+  name: 奇安信网神SecGate
+  author: P0m32Kun
+  tags: detect,tech,qianxin-secgate
+  severity: info
+  metadata:
+    product: qianxin-secgate
+    vendor: 00_unknown
+    verified: false
+  description: 奇安信网神 SecGate 防火墙 / VPN。
+  reference:
+  - https://www.qianxin.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*SecGate[^<]*</title>
+    - <title>[^<]*网神[^<]*</title>
+    case-insensitive: true

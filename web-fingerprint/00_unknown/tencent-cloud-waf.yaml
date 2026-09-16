@@ -1,0 +1,33 @@
+id: tencent-cloud-waf
+info:
+  name: 腾讯云WAF
+  author: P0m32Kun
+  tags: detect,tech,tencent-cloud-waf
+  severity: info
+  metadata:
+    product: tencent-cloud-waf
+    vendor: 00_unknown
+    verified: false
+  description: 腾讯云 Web 应用防火墙。
+  reference:
+  - https://cloud.tencent.com/product/waf
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - (?:Tencent-Waf|Tencent-WCS)
+    case-insensitive: true
+  - type: regex
+    part: x-nws-log-uuid
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - (?:TencentWAF|tc_qos)
+    case-insensitive: true

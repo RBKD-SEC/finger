@@ -1,0 +1,23 @@
+id: tengine
+info:
+  name: Tengine
+  author: P0m32Kun
+  tags: detect,tech,tengine
+  severity: info
+  metadata:
+    product: tengine
+    vendor: 00_unknown
+    verified: false
+  description: Tengine 是淘宝基于 Nginx 二次开发的高性能 Web 服务器。
+  reference:
+  - https://tengine.taobao.org
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - ^Tengine(?:/([\d.]+))?
+    case-insensitive: true

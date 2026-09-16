@@ -1,0 +1,33 @@
+id: jdcloud-cdn
+info:
+  name: 京东云CDN
+  author: P0m32Kun
+  tags: detect,tech,jdcloud-cdn
+  severity: info
+  metadata:
+    product: jdcloud-cdn
+    vendor: 00_unknown
+    verified: false
+  description: 京东云 JDCloud CDN。
+  reference:
+  - https://www.jdcloud.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: x-jcs-via
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: x-jdcdn-cache
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - JDCloud-CDN
+    case-insensitive: true

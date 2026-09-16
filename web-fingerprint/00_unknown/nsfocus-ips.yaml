@@ -1,0 +1,23 @@
+id: nsfocus-ips
+info:
+  name: 绿盟IPS
+  author: P0m32Kun
+  tags: detect,tech,nsfocus-ips
+  severity: info
+  metadata:
+    product: nsfocus-ips
+    vendor: 00_unknown
+    verified: false
+  description: 绿盟科技 入侵防御系统（IPS）。
+  reference:
+  - https://www.nsfocus.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*NSFOCUS NIPS[^<]*</title>
+    - <title>[^<]*绿盟[^<]*入侵防御[^<]*</title>
+    case-insensitive: true

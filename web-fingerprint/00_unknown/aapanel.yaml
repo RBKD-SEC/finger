@@ -1,0 +1,34 @@
+id: aapanel
+info:
+  name: aaPanel
+  author: P0m32Kun
+  tags: detect,tech,aapanel
+  severity: info
+  metadata:
+    product: aapanel
+    vendor: 00_unknown
+    verified: false
+  description: aaPanel 是宝塔面板的国际版。
+  reference:
+  - https://www.aapanel.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*aaPanel[^<]*</title>
+    - aaPanel Linux Panel
+    - aapanel_logo
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - aaPanel
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - aaPanel_
+    case-insensitive: true

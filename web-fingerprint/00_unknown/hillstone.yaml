@@ -1,0 +1,29 @@
+id: hillstone
+info:
+  name: 山石网科Hillstone
+  author: P0m32Kun
+  tags: detect,tech,hillstone
+  severity: info
+  metadata:
+    product: hillstone
+    vendor: 00_unknown
+    verified: false
+  description: 山石网科（Hillstone）防火墙。
+  reference:
+  - https://www.hillstonenet.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Hillstone[^<]*</title>
+    - <title>[^<]*山石网科[^<]*</title>
+    - /rest/api/login
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - Hillstone
+    case-insensitive: true

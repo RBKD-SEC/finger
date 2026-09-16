@@ -1,0 +1,27 @@
+id: gitea-cn-mirror
+info:
+  name: Gitea中国镜像
+  author: P0m32Kun
+  tags: detect,tech,gitea-cn-mirror
+  severity: info
+  metadata:
+    product: gitea-cn-mirror
+    vendor: 00_unknown
+    verified: false
+  description: Gitea 中文部署（常用于内网代码托管）。
+  reference:
+  - https://gitea.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Gitea[^<]*</title>
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - i_like_gitea
+    case-insensitive: true

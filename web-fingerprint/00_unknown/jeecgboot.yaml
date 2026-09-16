@@ -1,0 +1,25 @@
+id: jeecgboot
+info:
+  name: JeecgBoot
+  author: P0m32Kun
+  tags: detect,tech,jeecgboot
+  severity: info
+  metadata:
+    product: jeecgboot
+    vendor: 00_unknown
+    verified: false
+  description: JeecgBoot 是基于 Spring Boot + Vue 的国产低代码开发平台。
+  reference:
+  - https://www.jeecg.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Jeecg[ -]?Boot[^<]*</title>
+    - jeecg-boot
+    - /jeecg-boot/
+    - jeecgboot
+    case-insensitive: true

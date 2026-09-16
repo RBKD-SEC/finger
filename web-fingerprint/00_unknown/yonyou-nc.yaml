@@ -1,0 +1,28 @@
+id: yonyou-nc
+info:
+  name: 用友NC
+  author: P0m32Kun
+  tags: detect,tech,yonyou-nc
+  severity: info
+  metadata:
+    product: yonyou-nc
+    vendor: 00_unknown
+    verified: false
+  description: 用友 NC / NCCloud 是大型企业广泛使用的 ERP/财务系统。
+  reference:
+  - https://www.yonyou.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*用友[^<]*</title>
+    - <title>[^<]*(?:NC Cloud|NCCloud|YonyouNC)[^<]*</title>
+    - /nccloud/
+    - /uapjs/jsvm
+    - yyuap
+    - /nccloud/
+    - /uapjs/
+    case-insensitive: true

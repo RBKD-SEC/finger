@@ -1,0 +1,24 @@
+id: tower
+info:
+  name: Tower协作
+  author: P0m32Kun
+  tags: detect,tech,tower
+  severity: info
+  metadata:
+    product: tower
+    vendor: 00_unknown
+    verified: false
+  description: Tower 是国内常见的项目协作工具。
+  reference:
+  - https://tower.im
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Tower[^<]*</title>
+    - tower\.im
+    - tower\.im
+    case-insensitive: true

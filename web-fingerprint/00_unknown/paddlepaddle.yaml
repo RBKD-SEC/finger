@@ -1,0 +1,23 @@
+id: paddlepaddle
+info:
+  name: PaddlePaddle
+  author: P0m32Kun
+  tags: detect,tech,paddlepaddle
+  severity: info
+  metadata:
+    product: paddlepaddle
+    vendor: 00_unknown
+    verified: false
+  description: PaddlePaddle 是百度开源的深度学习框架（Web 服务）。
+  reference:
+  - https://www.paddlepaddle.org.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*PaddlePaddle[^<]*</title>
+    - paddlepaddle
+    case-insensitive: true

@@ -1,0 +1,24 @@
+id: weaver-e-mobile
+info:
+  name: 泛微e-mobile
+  author: P0m32Kun
+  tags: detect,tech,weaver-e-mobile
+  severity: info
+  metadata:
+    product: weaver-e-mobile
+    vendor: 00_unknown
+    verified: false
+  description: 泛微 e-mobile 是泛微面向移动办公的客户端服务端。
+  reference:
+  - https://www.weaver.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:e-mobile|EMobile)[^<]*</title>
+    - /client/login\.jsp
+    - /emobile/
+    case-insensitive: true

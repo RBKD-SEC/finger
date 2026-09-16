@@ -1,0 +1,24 @@
+id: jeecms
+info:
+  name: JeeCMS
+  author: P0m32Kun
+  tags: detect,tech,jeecms
+  severity: info
+  metadata:
+    product: jeecms
+    vendor: 00_unknown
+    verified: false
+  description: JeeCMS 是基于 Java 的开源企业内容管理系统。
+  reference:
+  - https://www.jeecms.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*jeecms[^>]*>JeeCMS</a>
+    - /jeecms/r/cms/
+    - <!--JeeCMS
+    case-insensitive: true

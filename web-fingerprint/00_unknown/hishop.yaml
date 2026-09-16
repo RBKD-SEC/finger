@@ -1,0 +1,23 @@
+id: hishop
+info:
+  name: HiShop
+  author: P0m32Kun
+  tags: detect,tech,hishop
+  severity: info
+  metadata:
+    product: hishop
+    vendor: 00_unknown
+    verified: false
+  description: HiShop（海商）是国内主流的电商建站系统。
+  reference:
+  - https://www.hishop.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*hishop[^>]*>HiShop</a>
+    - /templates/[^/]+/hishop
+    case-insensitive: true

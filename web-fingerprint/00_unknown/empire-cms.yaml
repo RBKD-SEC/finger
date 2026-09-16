@@ -1,0 +1,24 @@
+id: empire-cms
+info:
+  name: Empire CMS
+  author: P0m32Kun
+  tags: detect,tech,empire-cms
+  severity: info
+  metadata:
+    product: empire-cms
+    vendor: 00_unknown
+    verified: false
+  description: 帝国 CMS（EmpireCMS）是国内主流的开源 PHP CMS，主打高负载新闻/内容站。
+  reference:
+  - https://www.phome.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*phome\.net[^>]*>EmpireCMS</a>
+    - <!--Powered by EmpireCMS
+    - /e/data/(?:images|js|tmp)/
+    case-insensitive: true

@@ -1,0 +1,33 @@
+id: yunsuo
+info:
+  name: 云锁
+  author: P0m32Kun
+  tags: detect,tech,yunsuo
+  severity: info
+  metadata:
+    product: yunsuo
+    vendor: 00_unknown
+    verified: false
+  description: 云锁（Yunsuo）服务器安全防护。
+  reference:
+  - https://www.yunsuo.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - yunsuologo
+    - <title>[^<]*云锁[^<]*</title>
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - yunsuo_session
+    case-insensitive: true
+  - type: regex
+    part: x-powered-by-yunsuo
+    regex:
+    - .+
+    case-insensitive: true

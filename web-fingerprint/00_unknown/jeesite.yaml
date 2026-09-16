@@ -1,0 +1,25 @@
+id: jeesite
+info:
+  name: JeeSite
+  author: P0m32Kun
+  tags: detect,tech,jeesite
+  severity: info
+  metadata:
+    product: jeesite
+    vendor: 00_unknown
+    verified: false
+  description: JeeSite 是基于 Spring Boot 的企业级快速开发平台。
+  reference:
+  - https://jeesite.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*JeeSite[^<]*</title>
+    - Powered by <a [^>]*jeesite[^>]*>JeeSite</a>
+    - /jeesite/
+    - /static/jeesite
+    case-insensitive: true

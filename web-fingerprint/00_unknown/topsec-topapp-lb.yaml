@@ -1,0 +1,24 @@
+id: topsec-topapp-lb
+info:
+  name: 天融信TopApp-LB
+  author: P0m32Kun
+  tags: detect,tech,topsec-topapp-lb
+  severity: info
+  metadata:
+    product: topsec-topapp-lb
+    vendor: 00_unknown
+    verified: false
+  description: 天融信负载均衡 TopApp-LB。
+  reference:
+  - https://www.topsec.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*天融信[^<]*</title>
+    - <title>[^<]*Topsec[^<]*</title>
+    - <title>[^<]*TopApp-LB[^<]*</title>
+    case-insensitive: true

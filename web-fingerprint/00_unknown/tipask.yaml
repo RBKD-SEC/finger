@@ -1,0 +1,23 @@
+id: tipask
+info:
+  name: Tipask
+  author: P0m32Kun
+  tags: detect,tech,tipask
+  severity: info
+  metadata:
+    product: tipask
+    vendor: 00_unknown
+    verified: false
+  description: Tipask 是国内开源的问答系统，基于 Laravel。
+  reference:
+  - https://www.tipask.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*tipask[^>]*>Tipask</a>
+    - <meta name="generator" content="Tipask
+    case-insensitive: true

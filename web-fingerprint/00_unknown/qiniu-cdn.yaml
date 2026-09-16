@@ -1,0 +1,33 @@
+id: qiniu-cdn
+info:
+  name: 七牛云CDN
+  author: P0m32Kun
+  tags: detect,tech,qiniu-cdn
+  severity: info
+  metadata:
+    product: qiniu-cdn
+    vendor: 00_unknown
+    verified: false
+  description: 七牛云 Qiniu CDN/对象存储。
+  reference:
+  - https://www.qiniu.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - qnssl\.com
+    - qbox\.me
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - (?:Qiniu|nginx-qiniu|QNWS)
+    case-insensitive: true
+  - type: regex
+    part: x-reqid
+    regex:
+    - .+
+    case-insensitive: true

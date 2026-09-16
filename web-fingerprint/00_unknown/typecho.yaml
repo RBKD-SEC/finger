@@ -1,0 +1,25 @@
+id: typecho
+info:
+  name: Typecho
+  author: P0m32Kun
+  tags: detect,tech,typecho
+  severity: info
+  metadata:
+    product: typecho
+    vendor: 00_unknown
+    verified: false
+  description: Typecho 是国内开源的轻量级 PHP 博客系统。
+  reference:
+  - https://typecho.org
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <meta name="generator" content="Typecho
+    - Powered by <a [^>]*typecho[^>]*>Typecho</a>
+    - /usr/themes/[^/]+/
+    - Typecho_Cookie_
+    case-insensitive: true

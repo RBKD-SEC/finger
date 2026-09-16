@@ -1,0 +1,26 @@
+id: nightingale
+info:
+  name: Nightingale夜莺监控
+  author: P0m32Kun
+  tags: detect,tech,nightingale
+  severity: info
+  metadata:
+    product: nightingale
+    vendor: 00_unknown
+    verified: false
+  description: Nightingale（夜莺）是国内开源的云原生监控告警平台。
+  reference:
+  - https://n9e.github.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>Nightingale</title>
+    - n9e-fe
+    - <meta name="description" content="Nightingale
+    - /n9e/
+    - n9e-fe
+    case-insensitive: true

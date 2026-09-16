@@ -1,0 +1,30 @@
+id: halo
+info:
+  name: Halo
+  author: P0m32Kun
+  tags: detect,tech,halo
+  severity: info
+  metadata:
+    product: halo
+    vendor: 00_unknown
+    verified: false
+  description: Halo 是国内开源的 Java 博客与建站系统。
+  reference:
+  - https://halo.run
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <meta name="generator" content="Halo
+    - Powered by <a [^>]*halo[^>]*>Halo</a>
+    - /themes/.+/source/
+    - halo-comment
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - ^Halo
+    case-insensitive: true

@@ -1,0 +1,23 @@
+id: jpress
+info:
+  name: JPress
+  author: P0m32Kun
+  tags: detect,tech,jpress
+  severity: info
+  metadata:
+    product: jpress
+    vendor: 00_unknown
+    verified: false
+  description: JPress 是基于 Java + Jboot 的开源 CMS。
+  reference:
+  - https://www.jpress.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*jpress[^>]*>JPress</a>
+    - <meta name="application-name" content="JPress"
+    case-insensitive: true

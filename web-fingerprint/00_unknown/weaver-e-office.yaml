@@ -1,0 +1,27 @@
+id: weaver-e-office
+info:
+  name: 泛微e-office
+  author: P0m32Kun
+  tags: detect,tech,weaver-e-office
+  severity: info
+  metadata:
+    product: weaver-e-office
+    vendor: 00_unknown
+    verified: false
+  description: 泛微 e-office 是面向中小企业的协同办公平台。
+  reference:
+  - https://www.weaver.com.cn/eoffice.html
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:e-office|E-Office|eoffice)[^<]*</title>
+    - /eoffice_resource/
+    - /general/login_code\.php
+    - var _eoffice
+    - /eoffice/
+    - eoffice_loading
+    case-insensitive: true

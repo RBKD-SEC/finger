@@ -1,0 +1,29 @@
+id: metinfo
+info:
+  name: MetInfo
+  author: P0m32Kun
+  tags: detect,tech,metinfo
+  severity: info
+  metadata:
+    product: metinfo
+    vendor: 00_unknown
+    verified: false
+  description: MetInfo（米拓建站）是一款基于 PHP+MySQL 的企业建站系统，主要面向中小企业。
+  reference:
+  - https://www.metinfo.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*>MetInfo</a>
+    - content="MetInfo[^"]*"
+    - /templates/met/
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - metinfo_
+    case-insensitive: true

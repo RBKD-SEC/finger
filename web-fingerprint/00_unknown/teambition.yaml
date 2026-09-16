@@ -1,0 +1,24 @@
+id: teambition
+info:
+  name: Teambition
+  author: P0m32Kun
+  tags: detect,tech,teambition
+  severity: info
+  metadata:
+    product: teambition
+    vendor: 00_unknown
+    verified: false
+  description: Teambition 是阿里旗下的协作平台。
+  reference:
+  - https://www.teambition.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Teambition[^<]*</title>
+    - teambition\.com
+    - teambition\.com
+    case-insensitive: true

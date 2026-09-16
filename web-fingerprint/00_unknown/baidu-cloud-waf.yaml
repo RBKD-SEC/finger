@@ -1,0 +1,33 @@
+id: baidu-cloud-waf
+info:
+  name: 百度云WAF
+  author: P0m32Kun
+  tags: detect,tech,baidu-cloud-waf
+  severity: info
+  metadata:
+    product: baidu-cloud-waf
+    vendor: 00_unknown
+    verified: false
+  description: 百度智能云 WAF / CDN。
+  reference:
+  - https://cloud.baidu.com/product/waf.html
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - (?:bd-bws|yunjiasu|jsl-bd|BWS|BCN|JSL3)
+    case-insensitive: true
+  - type: regex
+    part: x-bce-request-id
+    regex:
+    - .+
+    case-insensitive: true
+  - type: regex
+    part: x-bdcdn-cache-status
+    regex:
+    - .+
+    case-insensitive: true

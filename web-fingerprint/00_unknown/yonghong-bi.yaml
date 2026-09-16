@@ -1,0 +1,25 @@
+id: yonghong-bi
+info:
+  name: 永洪BI
+  author: P0m32Kun
+  tags: detect,tech,yonghong-bi
+  severity: info
+  metadata:
+    product: yonghong-bi
+    vendor: 00_unknown
+    verified: false
+  description: 永洪 Yonghong BI 数据分析与可视化平台。
+  reference:
+  - https://www.yonghongtech.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Yonghong[^<]*</title>
+    - <title>[^<]*永洪[^<]*</title>
+    - /bi/Viewer
+    - yonghong
+    case-insensitive: true

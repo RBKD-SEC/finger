@@ -1,0 +1,27 @@
+id: kingdee-eas
+info:
+  name: 金蝶EAS
+  author: P0m32Kun
+  tags: detect,tech,kingdee-eas
+  severity: info
+  metadata:
+    product: kingdee-eas
+    vendor: 00_unknown
+    verified: false
+  description: 金蝶 EAS（Kingdee）是国内主流的企业管理软件。
+  reference:
+  - https://www.kingdee.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:Kingdee|金蝶|EAS)[^<]*</title>
+    - /easwebclient/
+    - /portal/htmlscript/easCorePortal
+    - kdsvr
+    - /easwebclient/
+    - /portal/easweb
+    case-insensitive: true

@@ -1,0 +1,28 @@
+id: gogs
+info:
+  name: Gogs
+  author: P0m32Kun
+  tags: detect,tech,gogs
+  severity: info
+  metadata:
+    product: gogs
+    vendor: 00_unknown
+    verified: false
+  description: Gogs 是国内开发者开源的轻量级自建 Git 服务。
+  reference:
+  - https://gogs.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>Gogs[^<]*</title>
+    - <meta name="description" content="Gogs
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - i_like_gogs
+    case-insensitive: true

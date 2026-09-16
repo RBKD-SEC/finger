@@ -1,0 +1,25 @@
+id: tencent-docs
+info:
+  name: 腾讯文档
+  author: P0m32Kun
+  tags: detect,tech,tencent-docs
+  severity: info
+  metadata:
+    product: tencent-docs
+    vendor: 00_unknown
+    verified: false
+  description: 腾讯文档 在线协作文档。
+  reference:
+  - https://docs.qq.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*腾讯文档[^<]*</title>
+    - docs\.qq\.com
+    - docs\.gtimg\.com
+    - docs\.qq\.com
+    case-insensitive: true

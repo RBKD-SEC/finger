@@ -1,0 +1,25 @@
+id: qizhi-fortress
+info:
+  name: 齐治堡垒机
+  author: P0m32Kun
+  tags: detect,tech,qizhi-fortress
+  severity: info
+  metadata:
+    product: qizhi-fortress
+    vendor: 00_unknown
+    verified: false
+  description: 齐治堡垒机 ShterM。
+  reference:
+  - https://www.shterm.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*齐治[^<]*</title>
+    - <title>[^<]*ShterM[^<]*</title>
+    - QiZhi\.Bastion
+    - /audit/
+    case-insensitive: true

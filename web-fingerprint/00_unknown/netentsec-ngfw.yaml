@@ -1,0 +1,24 @@
+id: netentsec-ngfw
+info:
+  name: 网康NGFW
+  author: P0m32Kun
+  tags: detect,tech,netentsec-ngfw
+  severity: info
+  metadata:
+    product: netentsec-ngfw
+    vendor: 00_unknown
+    verified: false
+  description: 网康下一代防火墙。
+  reference:
+  - https://www.netentsec.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*NetentSec[^<]*</title>
+    - <title>[^<]*网康[^<]*</title>
+    - NS-NGFW
+    case-insensitive: true

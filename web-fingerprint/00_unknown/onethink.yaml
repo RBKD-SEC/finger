@@ -1,0 +1,23 @@
+id: onethink
+info:
+  name: OneThink
+  author: P0m32Kun
+  tags: detect,tech,onethink
+  severity: info
+  metadata:
+    product: onethink
+    vendor: 00_unknown
+    verified: false
+  description: OneThink 是基于 ThinkPHP 3.x 的开源内容管理框架。
+  reference:
+  - https://www.onethink.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*onethink[^>]*>OneThink</a>
+    - /Public/static/onethink
+    case-insensitive: true

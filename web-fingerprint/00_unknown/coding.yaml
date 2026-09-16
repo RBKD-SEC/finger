@@ -1,0 +1,23 @@
+id: coding
+info:
+  name: Coding
+  author: P0m32Kun
+  tags: detect,tech,coding
+  severity: info
+  metadata:
+    product: coding
+    vendor: 00_unknown
+    verified: false
+  description: Coding（腾讯云开发者平台）。
+  reference:
+  - https://coding.net
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Coding[^<]*</title>
+    - coding\.net
+    case-insensitive: true

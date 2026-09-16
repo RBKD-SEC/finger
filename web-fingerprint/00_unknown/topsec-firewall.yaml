@@ -1,0 +1,23 @@
+id: topsec-firewall
+info:
+  name: 天融信防火墙
+  author: P0m32Kun
+  tags: detect,tech,topsec-firewall
+  severity: info
+  metadata:
+    product: topsec-firewall
+    vendor: 00_unknown
+    verified: false
+  description: 天融信 NGFW 下一代防火墙。
+  reference:
+  - https://www.topsec.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Topsec(?:Os|NGFW)?[^<]*</title>
+    - Topsec Network Security Technology
+    case-insensitive: true

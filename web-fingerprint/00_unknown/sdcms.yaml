@@ -1,0 +1,22 @@
+id: sdcms
+info:
+  name: SDCMS
+  author: P0m32Kun
+  tags: detect,tech,sdcms
+  severity: info
+  metadata:
+    product: sdcms
+    vendor: 00_unknown
+    verified: false
+  description: SDCMS 是基于 ASP/PHP 的轻量级国产 CMS。
+  reference:
+  - https://www.sdcms.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <!-- Powered By SDCMS
+    case-insensitive: true

@@ -1,0 +1,29 @@
+id: dbapp-mingyu-waf
+info:
+  name: 安恒明御WAF
+  author: P0m32Kun
+  tags: detect,tech,dbapp-mingyu-waf
+  severity: info
+  metadata:
+    product: dbapp-mingyu-waf
+    vendor: 00_unknown
+    verified: false
+  description: 安恒信息 明御 Web 应用防火墙。
+  reference:
+  - https://www.dbappsecurity.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*明御[^<]*WAF[^<]*</title>
+    - <title>[^<]*安恒[^<]*</title>
+    - WebRAY
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - WebRAY
+    case-insensitive: true

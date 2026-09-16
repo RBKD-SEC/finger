@@ -1,0 +1,23 @@
+id: maxkb
+info:
+  name: Maxkb
+  author: P0m32Kun
+  tags: detect,tech,maxkb
+  severity: info
+  metadata:
+    product: maxkb
+    vendor: 00_unknown
+    verified: false
+  description: MaxKB 是飞致云开源的基于 LLM 的企业知识库。
+  reference:
+  - https://maxkb.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>MaxKB</title>
+    - maxkb
+    case-insensitive: true

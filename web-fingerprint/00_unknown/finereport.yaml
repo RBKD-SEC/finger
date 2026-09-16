@@ -1,0 +1,33 @@
+id: finereport
+info:
+  name: FineReport
+  author: P0m32Kun
+  tags: detect,tech,finereport
+  severity: info
+  metadata:
+    product: finereport
+    vendor: 00_unknown
+    verified: false
+  description: FineReport（帆软报表）是国内主流的企业级报表与 BI 平台。
+  reference:
+  - https://www.fanruan.com/finereport
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*FineReport[^<]*</title>
+    - <title>[^<]*帆软[^<]*</title>
+    - /webroot/decision/login
+    - FR\.Decision
+    - fine-report
+    - /webroot/decision/
+    - fine-report
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - FineReport
+    case-insensitive: true

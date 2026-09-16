@@ -1,0 +1,28 @@
+id: tencent-edgeone
+info:
+  name: 腾讯云EdgeOne
+  author: P0m32Kun
+  tags: detect,tech,tencent-edgeone
+  severity: info
+  metadata:
+    product: tencent-edgeone
+    vendor: 00_unknown
+    verified: false
+  description: 腾讯云 EdgeOne 边缘安全加速平台。
+  reference:
+  - https://cloud.tencent.com/product/teo
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - (?:TencentEdgeOne|Teo)
+    case-insensitive: true
+  - type: regex
+    part: x-edgeone-request-id
+    regex:
+    - .+
+    case-insensitive: true

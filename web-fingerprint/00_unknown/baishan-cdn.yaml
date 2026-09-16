@@ -1,0 +1,33 @@
+id: baishan-cdn
+info:
+  name: 白山云CDN
+  author: P0m32Kun
+  tags: detect,tech,baishan-cdn
+  severity: info
+  metadata:
+    product: baishan-cdn
+    vendor: 00_unknown
+    verified: false
+  description: 白山云 BaishanCDN。
+  reference:
+  - https://www.baishan.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    part: server
+    regex:
+    - BaishanCDN
+    case-insensitive: true
+  - type: regex
+    part: x-cache
+    regex:
+    - BaishanCDN
+    case-insensitive: true
+  - type: regex
+    part: x-baishan
+    regex:
+    - .+
+    case-insensitive: true

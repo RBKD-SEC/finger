@@ -1,0 +1,24 @@
+id: venustech-tianqing-hanma
+info:
+  name: 启明星辰天清汉马
+  author: P0m32Kun
+  tags: detect,tech,venustech-tianqing-hanma
+  severity: info
+  metadata:
+    product: venustech-tianqing-hanma
+    vendor: 00_unknown
+    verified: false
+  description: 启明星辰 天清汉马 USG 防火墙。
+  reference:
+  - https://www.venustech.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:天清|VenusTech|Venusense)[^<]*</title>
+    - <title>[^<]*汉马[^<]*</title>
+    - VenusInfo
+    case-insensitive: true

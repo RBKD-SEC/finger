@@ -1,0 +1,27 @@
+id: landray-oa
+info:
+  name: 蓝凌OA
+  author: P0m32Kun
+  tags: detect,tech,landray-oa
+  severity: info
+  metadata:
+    product: landray-oa
+    vendor: 00_unknown
+    verified: false
+  description: 蓝凌 OA（Landray）是大型企业常用的协同管理与知识管理平台。
+  reference:
+  - https://www.landray.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:蓝凌|Landray|landray)[^<]*</title>
+    - /sys/portal/
+    - /sys/ui/
+    - Landray\.MainData
+    - /sys/ui/extend/theme/
+    - /resource/landray
+    case-insensitive: true

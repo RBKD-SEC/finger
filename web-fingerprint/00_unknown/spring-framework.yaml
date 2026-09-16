@@ -1,0 +1,23 @@
+id: spring-framework
+info:
+  name: Spring Framework
+  author: P0m32Kun
+  tags: detect,tech,spring-framework
+  severity: info
+  metadata:
+    product: spring-framework
+    vendor: 00_unknown
+    verified: false
+  description: Java Spring 框架（Spring MVC / Spring Boot），Whitelabel 错误页与 /error status 999 为典型特征。
+  reference:
+  - https://spring.io
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Whitelabel Error Page
+    - '"status":999'
+    case-insensitive: true

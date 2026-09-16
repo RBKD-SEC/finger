@@ -1,0 +1,24 @@
+id: apifox
+info:
+  name: Apifox
+  author: P0m32Kun
+  tags: detect,tech,apifox
+  severity: info
+  metadata:
+    product: apifox
+    vendor: 00_unknown
+    verified: false
+  description: Apifox 是国内主流的 API 设计、开发与测试一体化工具。
+  reference:
+  - https://www.apifox.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*Apifox[^<]*</title>
+    - apifox\.com
+    - apifox\.com
+    case-insensitive: true

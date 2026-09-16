@@ -1,0 +1,23 @@
+id: huawei-espace
+info:
+  name: 华为eSpace
+  author: P0m32Kun
+  tags: detect,tech,huawei-espace
+  severity: info
+  metadata:
+    product: huawei-espace
+    vendor: 00_unknown
+    verified: false
+  description: 华为 eSpace 统一通信平台。
+  reference:
+  - https://e.huawei.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*eSpace[^<]*</title>
+    - Huawei eSpace
+    case-insensitive: true

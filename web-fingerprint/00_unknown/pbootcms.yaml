@@ -1,0 +1,23 @@
+id: pbootcms
+info:
+  name: PbootCMS
+  author: P0m32Kun
+  tags: detect,tech,pbootcms
+  severity: info
+  metadata:
+    product: pbootcms
+    vendor: 00_unknown
+    verified: false
+  description: PbootCMS 是一款基于 PHP 的免费开源企业建站系统。
+  reference:
+  - https://www.pbootcms.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - Powered by <a [^>]*>PbootCMS</a>
+    - content="PbootCMS[^"]*"
+    case-insensitive: true

@@ -1,0 +1,23 @@
+id: eolinker
+info:
+  name: Eolinker
+  author: P0m32Kun
+  tags: detect,tech,eolinker
+  severity: info
+  metadata:
+    product: eolinker
+    vendor: 00_unknown
+    verified: false
+  description: Eolinker 是国内 API 管理协作平台。
+  reference:
+  - https://www.eolink.com
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*(?:Eolinker|Eolink)[^<]*</title>
+    - eolinker
+    case-insensitive: true

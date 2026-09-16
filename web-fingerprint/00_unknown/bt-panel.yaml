@@ -1,0 +1,36 @@
+id: bt-panel
+info:
+  name: 宝塔面板
+  author: P0m32Kun
+  tags: detect,tech,bt-panel
+  severity: info
+  metadata:
+    product: bt-panel
+    vendor: 00_unknown
+    verified: false
+  description: 宝塔面板（BT-Panel）是国内主流的服务器运维管理面板。
+  reference:
+  - https://www.bt.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*宝塔[^<]*</title>
+    - <title>(?:BT|安全入口)[^<]*</title>
+    - 宝塔Linux面板
+    - bt_panel
+    - BT-Panel
+    case-insensitive: true
+  - type: regex
+    part: server
+    regex:
+    - BT-Panel
+    case-insensitive: true
+  - type: regex
+    part: set-cookie
+    regex:
+    - BT_USER_INFO
+    case-insensitive: true

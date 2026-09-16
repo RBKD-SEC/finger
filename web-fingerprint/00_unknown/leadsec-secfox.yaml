@@ -1,0 +1,23 @@
+id: leadsec-secfox
+info:
+  name: 网御星云SecFox
+  author: P0m32Kun
+  tags: detect,tech,leadsec-secfox
+  severity: info
+  metadata:
+    product: leadsec-secfox
+    vendor: 00_unknown
+    verified: false
+  description: 网御星云 SecFox 综合日志审计/堡垒机。
+  reference:
+  - https://www.leadsec.com.cn
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: regex
+    regex:
+    - <title>[^<]*SecFox[^<]*</title>
+    - <title>[^<]*网御[^<]*星云[^<]*</title>
+    case-insensitive: true
