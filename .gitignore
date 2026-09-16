@@ -6,7 +6,7 @@ __pycache__/
 # Release artifacts
 *.tar.gz
 *.zip
-dist/
+dist/*.tar.gz
 build/
 
 # IDE / OS
@@ -20,3 +20,6 @@ build/
 
 # Go artifacts
 go.sum
+
+# dist 下的指纹构建产物是交付物，需要入库（release 归档仍忽略）
+!dist/observer-ward-fingerprints.json

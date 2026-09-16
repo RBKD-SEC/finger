@@ -1,0 +1,5207 @@
+[
+ {
+  "id": "1panel",
+  "info": {
+   "name": "1Panel",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,1panel",
+   "severity": "info",
+   "metadata": {
+    "product": "1panel",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "1Panel 是飞致云开源的现代化 Linux 服务器运维管理面板。",
+   "reference": [
+    "https://1panel.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>1Panel</title>",
+       "<meta name=\"description\" content=\"1Panel",
+       "1panel-favicon",
+       "1panel"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "psession"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "74cms",
+  "info": {
+   "name": "74CMS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,74cms",
+   "severity": "info",
+   "metadata": {
+    "product": "74cms",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "齐博 74CMS 是国内常见的 PHP 人才招聘系统。",
+   "reference": [
+    "https://www.74cms.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*74cms[^>]*>74CMS</a>",
+       "/74cms/templates/",
+       "<title>[^<]*74cms[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "aapanel",
+  "info": {
+   "name": "aaPanel",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,aapanel",
+   "severity": "info",
+   "metadata": {
+    "product": "aapanel",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "aaPanel 是宝塔面板的国际版。",
+   "reference": [
+    "https://www.aapanel.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*aaPanel[^<]*</title>",
+       "aaPanel Linux Panel",
+       "aapanel_logo"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "aaPanel"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "aaPanel_"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "aliyun-waf",
+  "info": {
+   "name": "阿里云WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,aliyun-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "aliyun-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "阿里云 Web 应用防火墙。",
+   "reference": [
+    "https://www.aliyun.com/product/waf"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Aliyun Security[^<]*</title>",
+       "errors\\.aliyun\\.com"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "(?:aliyungf_tc|acw_tc|acw_sc__v2|acw_sc__v3)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "aliyungf_tc"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "acw_tc"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "acw_sc__v2"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "acw_sc__v3"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "apifox",
+  "info": {
+   "name": "Apifox",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,apifox",
+   "severity": "info",
+   "metadata": {
+    "product": "apifox",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Apifox 是国内主流的 API 设计、开发与测试一体化工具。",
+   "reference": [
+    "https://www.apifox.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Apifox[^<]*</title>",
+       "apifox\\.com",
+       "apifox\\.com"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "baidu-cloud-waf",
+  "info": {
+   "name": "百度云WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,baidu-cloud-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "baidu-cloud-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "百度智能云 WAF / CDN。",
+   "reference": [
+    "https://cloud.baidu.com/product/waf.html"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "(?:bd-bws|yunjiasu|jsl-bd|BWS|BCN|JSL3)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-bce-request-id",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-bdcdn-cache-status",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "baishan-cdn",
+  "info": {
+   "name": "白山云CDN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,baishan-cdn",
+   "severity": "info",
+   "metadata": {
+    "product": "baishan-cdn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "白山云 BaishanCDN。",
+   "reference": [
+    "https://www.baishan.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "BaishanCDN"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-cache",
+      "regex": [
+       "BaishanCDN"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-baishan",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bt-panel",
+  "info": {
+   "name": "宝塔面板",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,bt-panel",
+   "severity": "info",
+   "metadata": {
+    "product": "bt-panel",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "宝塔面板（BT-Panel）是国内主流的服务器运维管理面板。",
+   "reference": [
+    "https://www.bt.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*宝塔[^<]*</title>",
+       "<title>(?:BT|安全入口)[^<]*</title>",
+       "宝塔Linux面板",
+       "bt_panel",
+       "BT-Panel"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "BT-Panel"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "BT_USER_INFO"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bt-waf",
+  "info": {
+   "name": "宝塔WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,bt-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "bt-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "宝塔 Web 应用防火墙。",
+   "reference": [
+    "https://www.bt.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:网站防火墙|宝塔WAF)[^<]*</title>",
+       "btwaf"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^btwaf"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "waf",
+      "regex": [
+       "^btwaf$"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "chatglm-web",
+  "info": {
+   "name": "ChatGLM-Web",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,chatglm-web",
+   "severity": "info",
+   "metadata": {
+    "product": "chatglm-web",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "智谱 ChatGLM Web 推理界面。",
+   "reference": [
+    "https://www.zhipuai.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*ChatGLM[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "chinacache",
+  "info": {
+   "name": "ChinaCache",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,chinacache",
+   "severity": "info",
+   "metadata": {
+    "product": "chinacache",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "蓝汛 ChinaCache CDN。",
+   "reference": [
+    "https://www.chinacache.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "powered-by-chinacache",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "ChinaCache"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-via",
+      "regex": [
+       "[^,]*ChinaCache"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "chuangyucdn",
+  "info": {
+   "name": "ChuangYuCDN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,chuangyucdn",
+   "severity": "info",
+   "metadata": {
+    "product": "chuangyucdn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "知道创宇 创宇盾 CDN / 抗 D 防御。",
+   "reference": [
+    "https://www.yunaq.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^yunaq"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-yunaq-from",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "yunsuo_session_verify"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cmseasy",
+  "info": {
+   "name": "CmsEasy",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,cmseasy",
+   "severity": "info",
+   "metadata": {
+    "product": "cmseasy",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "CmsEasy 是国内一款基于 PHP 的开源企业建站系统。",
+   "reference": [
+    "https://www.cmseasy.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*cmseasy[^>]*>CmsEasy</a>",
+       "/cmseasy/data/",
+       "<!-- Powered by CmsEasy"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "coding",
+  "info": {
+   "name": "Coding",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,coding",
+   "severity": "info",
+   "metadata": {
+    "product": "coding",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Coding（腾讯云开发者平台）。",
+   "reference": [
+    "https://coding.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Coding[^<]*</title>",
+       "coding\\.net"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "coremail",
+  "info": {
+   "name": "Coremail",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,coremail",
+   "severity": "info",
+   "metadata": {
+    "product": "coremail",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Coremail 是国内主流的邮件系统（论客）。",
+   "reference": [
+    "https://www.coremail.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:Coremail|论客)[^<]*</title>",
+       "Coremail XT",
+       "/coremail/common/",
+       "/coremail/index",
+       "/coremail/"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-coremail",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-cm-transid",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dahua",
+  "info": {
+   "name": "大华股份",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,dahua",
+   "severity": "info",
+   "metadata": {
+    "product": "dahua",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "大华 Dahua 摄像机 / NVR / DVR Web 管理界面。",
+   "reference": [
+    "https://www.dahuatech.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "/RPC2_Login",
+       "/current_config/Account",
+       "Dahua\\.LoginCommon",
+       "DhWeb\\.js"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "www-authenticate",
+      "regex": [
+       "(?i)Dahua"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dataease",
+  "info": {
+   "name": "DataEase",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,dataease",
+   "severity": "info",
+   "metadata": {
+    "product": "dataease",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "DataEase 是飞致云开源的国产数据可视化分析工具。",
+   "reference": [
+    "https://dataease.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>DataEase</title>",
+       "<meta name=\"description\" content=\"DataEase",
+       "dataease-favicon",
+       "/dataease/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dbapp-mingyu-waf",
+  "info": {
+   "name": "安恒明御WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,dbapp-mingyu-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "dbapp-mingyu-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "安恒信息 明御 Web 应用防火墙。",
+   "reference": [
+    "https://www.dbappsecurity.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*明御[^<]*WAF[^<]*</title>",
+       "<title>[^<]*安恒[^<]*</title>",
+       "WebRAY"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "WebRAY"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dbapp-xuanwudun",
+  "info": {
+   "name": "安恒玄武盾",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,dbapp-xuanwudun",
+   "severity": "info",
+   "metadata": {
+    "product": "dbapp-xuanwudun",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "安恒信息 玄武盾 云防御。",
+   "reference": [
+    "https://www.dbappsecurity.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*玄武盾[^<]*</title>",
+       "玄武盾",
+       "xuanwudun"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dingtalk-open-platform",
+  "info": {
+   "name": "钉钉开放平台",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,dingtalk-open-platform",
+   "severity": "info",
+   "metadata": {
+    "product": "dingtalk-open-platform",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "钉钉（DingTalk）开放平台 Web 应用。",
+   "reference": [
+    "https://open.dingtalk.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*钉钉[^<]*</title>",
+       "dingtalk-jsbridge",
+       "dd-static",
+       "g\\.alicdn\\.com/dingding/",
+       "ddapi"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "discuz-q",
+  "info": {
+   "name": "Discuz! Q",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,discuz-q",
+   "severity": "info",
+   "metadata": {
+    "product": "discuz-q",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Discuz! Q 是腾讯开源的下一代社区系统。",
+   "reference": [
+    "https://discuz.chat"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Discuz! Q[^<]*</title>",
+       "Powered by <a [^>]*>Discuz! Q</a>",
+       "/discuz-q/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "douphp",
+  "info": {
+   "name": "DouPHP",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,douphp",
+   "severity": "info",
+   "metadata": {
+    "product": "douphp",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "DouPHP（豆豆CMS）是基于 PHP+MySQL 的轻量级企业建站系统。",
+   "reference": [
+    "https://www.douco.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*douphp[^>]*>DouPHP</a>",
+       "<!--DouPHP",
+       "/install/douphp\\.lock"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "easyimage",
+  "info": {
+   "name": "EasyImage",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,easyimage",
+   "severity": "info",
+   "metadata": {
+    "product": "easyimage",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "EasyImage 简单图床是国内常见的开源图床程序。",
+   "reference": [
+    "https://github.com/icret/EasyImages2.0"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*简单图床[^<]*</title>",
+       "<title>EasyImage[^<]*</title>",
+       "easyimage"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "emlog",
+  "info": {
+   "name": "Emlog",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,emlog",
+   "severity": "info",
+   "metadata": {
+    "product": "emlog",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Emlog 是国内开源的轻量级 PHP 博客与建站系统。",
+   "reference": [
+    "https://www.emlog.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*emlog[^>]*>Emlog</a>",
+       "<meta name=\"generator\" content=\"emlog",
+       "/content/templates/[^/]+/main\\.css"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "empire-cms",
+  "info": {
+   "name": "Empire CMS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,empire-cms",
+   "severity": "info",
+   "metadata": {
+    "product": "empire-cms",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "帝国 CMS（EmpireCMS）是国内主流的开源 PHP CMS，主打高负载新闻/内容站。",
+   "reference": [
+    "https://www.phome.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*phome\\.net[^>]*>EmpireCMS</a>",
+       "<!--Powered by EmpireCMS",
+       "/e/data/(?:images|js|tmp)/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "eolinker",
+  "info": {
+   "name": "Eolinker",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,eolinker",
+   "severity": "info",
+   "metadata": {
+    "product": "eolinker",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Eolinker 是国内 API 管理协作平台。",
+   "reference": [
+    "https://www.eolink.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:Eolinker|Eolink)[^<]*</title>",
+       "eolinker"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "eyou-mail",
+  "info": {
+   "name": "亿邮邮件系统",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,eyou-mail",
+   "severity": "info",
+   "metadata": {
+    "product": "eyou-mail",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "亿邮（Eyou）邮件系统是国内常见的企业邮件平台。",
+   "reference": [
+    "https://www.eyou.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*亿邮[^<]*</title>",
+       "<title>[^<]*eYou[^<]*</title>",
+       "/webmail/eyou",
+       "eyou_session"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "eyou_session"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fastjson",
+  "info": {
+   "name": "Fastjson",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,fastjson",
+   "severity": "info",
+   "metadata": {
+    "product": "fastjson",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Fastjson 是阿里巴巴开源的 Java JSON 库（com.alibaba.fastjson）。无 HTTP 头特征，仅在应用将 fastjson 异常/版本信息回显到响应时可识别（未捕获异常、JSON 接口报错回显场景）。主动探测见 nuclei http/technologies/fastjson-version.yaml。",
+   "reference": [
+    "https://github.com/alibaba/fastjson"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "com\\.alibaba\\.fastjson\\.JSONException",
+       "fastjson-version",
+       "autoType is not support",
+       "fastjson-version.*?([0-9]+\\.[0-9]+\\.[0-9]+)"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "feishu-lark",
+  "info": {
+   "name": "飞书Lark",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,feishu-lark",
+   "severity": "info",
+   "metadata": {
+    "product": "feishu-lark",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "飞书 / Lark 协同办公平台。",
+   "reference": [
+    "https://www.feishu.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:飞书|Lark)[^<]*</title>",
+       "feishu\\.cn",
+       "larksuite",
+       "sf\\d-cn\\.feishucdn\\.com",
+       "lf-package-cn\\.feishucdn\\.com",
+       "feishu\\.cn"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "finebi",
+  "info": {
+   "name": "FineBI",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,finebi",
+   "severity": "info",
+   "metadata": {
+    "product": "finebi",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "FineBI（帆软 BI）是国内主流的企业级商业智能平台。",
+   "reference": [
+    "https://www.finebi.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*FineBI[^<]*</title>",
+       "<title>[^<]*帆软BI[^<]*</title>",
+       "/webroot/decision/login",
+       "BI\\.Decision",
+       "fine-bi",
+       "fine-bi",
+       "/webroot/decision/finebi"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "finereport",
+  "info": {
+   "name": "FineReport",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,finereport",
+   "severity": "info",
+   "metadata": {
+    "product": "finereport",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "FineReport（帆软报表）是国内主流的企业级报表与 BI 平台。",
+   "reference": [
+    "https://www.fanruan.com/finereport"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*FineReport[^<]*</title>",
+       "<title>[^<]*帆软[^<]*</title>",
+       "/webroot/decision/login",
+       "FR\\.Decision",
+       "fine-report",
+       "/webroot/decision/",
+       "fine-report"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "FineReport"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "gitea-cn-mirror",
+  "info": {
+   "name": "Gitea中国镜像",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,gitea-cn-mirror",
+   "severity": "info",
+   "metadata": {
+    "product": "gitea-cn-mirror",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Gitea 中文部署（常用于内网代码托管）。",
+   "reference": [
+    "https://gitea.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Gitea[^<]*</title>"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "i_like_gitea"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "gogs",
+  "info": {
+   "name": "Gogs",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,gogs",
+   "severity": "info",
+   "metadata": {
+    "product": "gogs",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Gogs 是国内开发者开源的轻量级自建 Git 服务。",
+   "reference": [
+    "https://gogs.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>Gogs[^<]*</title>",
+       "<meta name=\"description\" content=\"Gogs"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "i_like_gogs"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "h3c",
+  "info": {
+   "name": "H3C设备",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,h3c",
+   "severity": "info",
+   "metadata": {
+    "product": "h3c",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "新华三 H3C 网络设备 Web 管理界面。",
+   "reference": [
+    "https://www.h3c.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*H3C[^<]*</title>",
+       "/wcn/frame/login\\.html",
+       "H3C Web Login",
+       "src=\"/images/H3C_"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^h3c"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "halo",
+  "info": {
+   "name": "Halo",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,halo",
+   "severity": "info",
+   "metadata": {
+    "product": "halo",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Halo 是国内开源的 Java 博客与建站系统。",
+   "reference": [
+    "https://halo.run"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<meta name=\"generator\" content=\"Halo",
+       "Powered by <a [^>]*halo[^>]*>Halo</a>",
+       "/themes/.+/source/",
+       "halo-comment"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^Halo"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "hdwiki",
+  "info": {
+   "name": "HDWiki",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,hdwiki",
+   "severity": "info",
+   "metadata": {
+    "product": "hdwiki",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "HDWiki 是互动百科开源的中文 wiki 系统。",
+   "reference": [
+    "https://kaiyuan.hudong.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*>HDWiki</a>",
+       "/hdwiki/",
+       "<meta name=\"generator\" content=\"HDWiki"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "hikvision",
+  "info": {
+   "name": "海康威视",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,hikvision",
+   "severity": "info",
+   "metadata": {
+    "product": "hikvision",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "海康威视 Hikvision 摄像机 / NVR / DVR Web 管理界面。",
+   "reference": [
+    "https://www.hikvision.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "/doc/page/login\\.asp",
+       "/doc/ui/locale/",
+       "/SDK/webLanguage",
+       "App-WebViewer",
+       "Hikvision-Webs",
+       "/SDK/web"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "(?:App-webs|webserver|DNVRS-Webs|Hikvision-Webs)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "www-authenticate",
+      "regex": [
+       "(?i)Hikvision"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "hillstone",
+  "info": {
+   "name": "山石网科Hillstone",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,hillstone",
+   "severity": "info",
+   "metadata": {
+    "product": "hillstone",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "山石网科（Hillstone）防火墙。",
+   "reference": [
+    "https://www.hillstonenet.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Hillstone[^<]*</title>",
+       "<title>[^<]*山石网科[^<]*</title>",
+       "/rest/api/login"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "Hillstone"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "hishop",
+  "info": {
+   "name": "HiShop",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,hishop",
+   "severity": "info",
+   "metadata": {
+    "product": "hishop",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "HiShop（海商）是国内主流的电商建站系统。",
+   "reference": [
+    "https://www.hishop.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*hishop[^>]*>HiShop</a>",
+       "/templates/[^/]+/hishop"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "huatian-oa",
+  "info": {
+   "name": "华天动力OA",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,huatian-oa",
+   "severity": "info",
+   "metadata": {
+    "product": "huatian-oa",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "华天动力 OA 是国内常见的协同办公系统。",
+   "reference": [
+    "https://www.oa8000.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*华天动力[^<]*</title>",
+       "OA8000",
+       "/htmis/",
+       "/OAapp/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "huawei-espace",
+  "info": {
+   "name": "华为eSpace",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,huawei-espace",
+   "severity": "info",
+   "metadata": {
+    "product": "huawei-espace",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "华为 eSpace 统一通信平台。",
+   "reference": [
+    "https://e.huawei.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*eSpace[^<]*</title>",
+       "Huawei eSpace"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "huawei-usg",
+  "info": {
+   "name": "华为USG",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,huawei-usg",
+   "severity": "info",
+   "metadata": {
+    "product": "huawei-usg",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "华为 USG 系列防火墙 / 网关设备。",
+   "reference": [
+    "https://www.huawei.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*USG\\d+[^<]*</title>",
+       "<title>[^<]*Huawei[^<]*USG[^<]*</title>",
+       "/eweb/dist/index\\.html"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^Huawei[^/]*"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jdcloud-cdn",
+  "info": {
+   "name": "京东云CDN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jdcloud-cdn",
+   "severity": "info",
+   "metadata": {
+    "product": "jdcloud-cdn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "京东云 JDCloud CDN。",
+   "reference": [
+    "https://www.jdcloud.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "x-jcs-via",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-jdcdn-cache",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "JDCloud-CDN"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jeecgboot",
+  "info": {
+   "name": "JeecgBoot",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jeecgboot",
+   "severity": "info",
+   "metadata": {
+    "product": "jeecgboot",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "JeecgBoot 是基于 Spring Boot + Vue 的国产低代码开发平台。",
+   "reference": [
+    "https://www.jeecg.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Jeecg[ -]?Boot[^<]*</title>",
+       "jeecg-boot",
+       "/jeecg-boot/",
+       "jeecgboot"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jeecms",
+  "info": {
+   "name": "JeeCMS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jeecms",
+   "severity": "info",
+   "metadata": {
+    "product": "jeecms",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "JeeCMS 是基于 Java 的开源企业内容管理系统。",
+   "reference": [
+    "https://www.jeecms.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*jeecms[^>]*>JeeCMS</a>",
+       "/jeecms/r/cms/",
+       "<!--JeeCMS"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jeesite",
+  "info": {
+   "name": "JeeSite",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jeesite",
+   "severity": "info",
+   "metadata": {
+    "product": "jeesite",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "JeeSite 是基于 Spring Boot 的企业级快速开发平台。",
+   "reference": [
+    "https://jeesite.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*JeeSite[^<]*</title>",
+       "Powered by <a [^>]*jeesite[^>]*>JeeSite</a>",
+       "/jeesite/",
+       "/static/jeesite"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jiasule",
+  "info": {
+   "name": "加速乐Jiasule",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jiasule",
+   "severity": "info",
+   "metadata": {
+    "product": "jiasule",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "知道创宇加速乐 CDN/WAF。",
+   "reference": [
+    "https://www.jiasule.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>jiasule",
+       "jsl_clearance",
+       "/cdn-cgi/jiasule"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "jsl/"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "(?:__jsluid|__jsl_clearance|jsluid_h)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "__jsluid_h"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "__jsl_clearance_s"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "__jsl_clearance"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jinhe-oa",
+  "info": {
+   "name": "金和OA",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jinhe-oa",
+   "severity": "info",
+   "metadata": {
+    "product": "jinhe-oa",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "金和 OA（C6 / JC6）是国内的协同办公平台。",
+   "reference": [
+    "https://www.jinher.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*金和[^<]*</title>",
+       "<title>[^<]*JinherOA[^<]*</title>",
+       "Jinher\\.OA",
+       "/C6/JHSoft\\.",
+       "/C6/Jhsoft\\.Web"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jpress",
+  "info": {
+   "name": "JPress",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jpress",
+   "severity": "info",
+   "metadata": {
+    "product": "jpress",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "JPress 是基于 Java + Jboot 的开源 CMS。",
+   "reference": [
+    "https://www.jpress.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*jpress[^>]*>JPress</a>",
+       "<meta name=\"application-name\" content=\"JPress\""
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "jumpserver",
+  "info": {
+   "name": "JumpServer",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,jumpserver",
+   "severity": "info",
+   "metadata": {
+    "product": "jumpserver",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "JumpServer 是飞致云开源的多云堡垒机/PAM 平台。",
+   "reference": [
+    "https://www.jumpserver.org"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>JumpServer</title>",
+       "<meta name=\"keywords\" content=\"JumpServer",
+       "src=\"/static/img/logo[^\"]*\\.png\"",
+       "jumpserver-js",
+       "/static/js/jumpserver",
+       "/static/applets/"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-jms-",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "jms_csrftoken"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "jumpserver_csrftoken"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kindeditor",
+  "info": {
+   "name": "KindEditor",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,kindeditor",
+   "severity": "info",
+   "metadata": {
+    "product": "kindeditor",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "KindEditor 是国内常见的开源 HTML 富文本编辑器。",
+   "reference": [
+    "http://kindeditor.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<script[^>]*kindeditor(?:-min)?\\.js[^>]*></script>",
+       "/kindeditor(?:-all)?(?:-min)?\\.js",
+       "kindeditor/themes/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kingdee-cloud-galaxy",
+  "info": {
+   "name": "金蝶云·星空",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,kingdee-cloud-galaxy",
+   "severity": "info",
+   "metadata": {
+    "product": "kingdee-cloud-galaxy",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "金蝶云·星空（K/3 Cloud）是金蝶面向中大型企业的云 ERP。",
+   "reference": [
+    "https://www.kingdee.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:K/3 Cloud|K3Cloud|金蝶云·星空)[^<]*</title>",
+       "/k3cloud/",
+       "/kdsvc/login",
+       "Kingdee\\.BOS",
+       "/k3cloud/",
+       "/kdsvc/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kingdee-eas",
+  "info": {
+   "name": "金蝶EAS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,kingdee-eas",
+   "severity": "info",
+   "metadata": {
+    "product": "kingdee-eas",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "金蝶 EAS（Kingdee）是国内主流的企业管理软件。",
+   "reference": [
+    "https://www.kingdee.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:Kingdee|金蝶|EAS)[^<]*</title>",
+       "/easwebclient/",
+       "/portal/htmlscript/easCorePortal",
+       "kdsvr",
+       "/easwebclient/",
+       "/portal/easweb"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "kingsoft-docs",
+  "info": {
+   "name": "金山文档",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,kingsoft-docs",
+   "severity": "info",
+   "metadata": {
+    "product": "kingsoft-docs",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "金山文档（WPS Docs）在线协作文档。",
+   "reference": [
+    "https://www.kdocs.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*金山文档[^<]*</title>",
+       "kdocs\\.cn",
+       "wps365",
+       "res\\.wps\\.cn",
+       "kdocs\\.cn"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "knife4j",
+  "info": {
+   "name": "knife4j",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,knife4j",
+   "severity": "info",
+   "metadata": {
+    "product": "knife4j",
+    "vendor": "00_unknown",
+    "verified": true
+   },
+   "description": "knife4j 是基于 Swagger 的增强型 API 文档框架，入口固定为 /doc.html。"
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/doc.html"
+    ],
+    "matchers": [
+     {
+      "type": "word",
+      "words": [
+       "knife4j",
+       "SwaggerBootstrapUi"
+      ],
+      "condition": "or",
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "landray-oa",
+  "info": {
+   "name": "蓝凌OA",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,landray-oa",
+   "severity": "info",
+   "metadata": {
+    "product": "landray-oa",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "蓝凌 OA（Landray）是大型企业常用的协同管理与知识管理平台。",
+   "reference": [
+    "https://www.landray.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:蓝凌|Landray|landray)[^<]*</title>",
+       "/sys/portal/",
+       "/sys/ui/",
+       "Landray\\.MainData",
+       "/sys/ui/extend/theme/",
+       "/resource/landray"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "leadsec-secfox",
+  "info": {
+   "name": "网御星云SecFox",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,leadsec-secfox",
+   "severity": "info",
+   "metadata": {
+    "product": "leadsec-secfox",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "网御星云 SecFox 综合日志审计/堡垒机。",
+   "reference": [
+    "https://www.leadsec.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*SecFox[^<]*</title>",
+       "<title>[^<]*网御[^<]*星云[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "maccms",
+  "info": {
+   "name": "苹果CMS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,maccms",
+   "severity": "info",
+   "metadata": {
+    "product": "maccms",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "苹果 CMS（maccms）是国内常见的 PHP 视频内容管理系统。",
+   "reference": [
+    "https://www.maccms.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "/template/[^/]+/(?:html|css|js)/maccms",
+       "<a [^>]*>maccms[^<]*</a>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "magic-winmail",
+  "info": {
+   "name": "Magic Winmail",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,magic-winmail",
+   "severity": "info",
+   "metadata": {
+    "product": "magic-winmail",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Magic Winmail Server 是国内常见的邮件系统。",
+   "reference": [
+    "https://www.magicwinmail.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:Winmail|Magic Winmail)[^<]*</title>",
+       "Winmail Server",
+       "/admin/login\\.php\\?lang="
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "maxkb",
+  "info": {
+   "name": "Maxkb",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,maxkb",
+   "severity": "info",
+   "metadata": {
+    "product": "maxkb",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "MaxKB 是飞致云开源的基于 LLM 的企业知识库。",
+   "reference": [
+    "https://maxkb.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>MaxKB</title>",
+       "maxkb"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "metersphere",
+  "info": {
+   "name": "MeterSphere",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,metersphere",
+   "severity": "info",
+   "metadata": {
+    "product": "metersphere",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "MeterSphere 是飞致云开源的一站式测试平台。",
+   "reference": [
+    "https://metersphere.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>MeterSphere</title>",
+       "metersphere-favicon",
+       "/metersphere/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "metinfo",
+  "info": {
+   "name": "MetInfo",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,metinfo",
+   "severity": "info",
+   "metadata": {
+    "product": "metinfo",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "MetInfo（米拓建站）是一款基于 PHP+MySQL 的企业建站系统，主要面向中小企业。",
+   "reference": [
+    "https://www.metinfo.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*>MetInfo</a>",
+       "content=\"MetInfo[^\"]*\"",
+       "/templates/met/"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "metinfo_"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "netentsec-ngfw",
+  "info": {
+   "name": "网康NGFW",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,netentsec-ngfw",
+   "severity": "info",
+   "metadata": {
+    "product": "netentsec-ngfw",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "网康下一代防火墙。",
+   "reference": [
+    "https://www.netentsec.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*NetentSec[^<]*</title>",
+       "<title>[^<]*网康[^<]*</title>",
+       "NS-NGFW"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "nightingale",
+  "info": {
+   "name": "Nightingale夜莺监控",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,nightingale",
+   "severity": "info",
+   "metadata": {
+    "product": "nightingale",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Nightingale（夜莺）是国内开源的云原生监控告警平台。",
+   "reference": [
+    "https://n9e.github.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>Nightingale</title>",
+       "n9e-fe",
+       "<meta name=\"description\" content=\"Nightingale",
+       "/n9e/",
+       "n9e-fe"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "nsfocus-ips",
+  "info": {
+   "name": "绿盟IPS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,nsfocus-ips",
+   "severity": "info",
+   "metadata": {
+    "product": "nsfocus-ips",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "绿盟科技 入侵防御系统（IPS）。",
+   "reference": [
+    "https://www.nsfocus.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*NSFOCUS NIPS[^<]*</title>",
+       "<title>[^<]*绿盟[^<]*入侵防御[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "nsfocus-waf",
+  "info": {
+   "name": "绿盟WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,nsfocus-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "nsfocus-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "绿盟科技 Web 应用防护系统（WAF）。",
+   "reference": [
+    "https://www.nsfocus.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*NSFOCUS WAF[^<]*</title>",
+       "<title>[^<]*绿盟[^<]*Web应用防护[^<]*</title>",
+       "/portal/index/login"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "NSFocus WAF"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "onethink",
+  "info": {
+   "name": "OneThink",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,onethink",
+   "severity": "info",
+   "metadata": {
+    "product": "onethink",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "OneThink 是基于 ThinkPHP 3.x 的开源内容管理框架。",
+   "reference": [
+    "https://www.onethink.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*onethink[^>]*>OneThink</a>",
+       "/Public/static/onethink"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "openresty",
+  "info": {
+   "name": "OpenResty",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,openresty",
+   "severity": "info",
+   "metadata": {
+    "product": "openresty",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "OpenResty 是国人发起的基于 Nginx + Lua 的高性能 Web 平台。",
+   "reference": [
+    "https://openresty.org"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^openresty(?:/([\\d.]+))?"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "paddlepaddle",
+  "info": {
+   "name": "PaddlePaddle",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,paddlepaddle",
+   "severity": "info",
+   "metadata": {
+    "product": "paddlepaddle",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "PaddlePaddle 是百度开源的深度学习框架（Web 服务）。",
+   "reference": [
+    "https://www.paddlepaddle.org.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*PaddlePaddle[^<]*</title>",
+       "paddlepaddle"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pbootcms",
+  "info": {
+   "name": "PbootCMS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,pbootcms",
+   "severity": "info",
+   "metadata": {
+    "product": "pbootcms",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "PbootCMS 是一款基于 PHP 的免费开源企业建站系统。",
+   "reference": [
+    "https://www.pbootcms.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*>PbootCMS</a>",
+       "content=\"PbootCMS[^\"]*\""
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "phpstudy-panel",
+  "info": {
+   "name": "phpStudy小皮面板",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,phpstudy-panel",
+   "severity": "info",
+   "metadata": {
+    "product": "phpstudy-panel",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "小皮面板（phpStudy）国内常见的开发环境/服务器面板。",
+   "reference": [
+    "https://www.xp.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*小皮[^<]*</title>",
+       "<title>[^<]*phpStudy[^<]*</title>",
+       "xiaopi"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "qianxin-secgate",
+  "info": {
+   "name": "奇安信网神SecGate",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,qianxin-secgate",
+   "severity": "info",
+   "metadata": {
+    "product": "qianxin-secgate",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "奇安信网神 SecGate 防火墙 / VPN。",
+   "reference": [
+    "https://www.qianxin.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*SecGate[^<]*</title>",
+       "<title>[^<]*网神[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "qianxin-tianyan",
+  "info": {
+   "name": "奇安信天眼",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,qianxin-tianyan",
+   "severity": "info",
+   "metadata": {
+    "product": "qianxin-tianyan",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "奇安信天眼新一代威胁感知系统。",
+   "reference": [
+    "https://www.qianxin.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*天眼[^<]*</title>",
+       "<title>[^<]*Skyeye[^<]*</title>",
+       "qianxin/skyeye"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "qiniu-cdn",
+  "info": {
+   "name": "七牛云CDN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,qiniu-cdn",
+   "severity": "info",
+   "metadata": {
+    "product": "qiniu-cdn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "七牛云 Qiniu CDN/对象存储。",
+   "reference": [
+    "https://www.qiniu.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "qnssl\\.com",
+       "qbox\\.me"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "(?:Qiniu|nginx-qiniu|QNWS)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-reqid",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "qizhi-fortress",
+  "info": {
+   "name": "齐治堡垒机",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,qizhi-fortress",
+   "severity": "info",
+   "metadata": {
+    "product": "qizhi-fortress",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "齐治堡垒机 ShterM。",
+   "reference": [
+    "https://www.shterm.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*齐治[^<]*</title>",
+       "<title>[^<]*ShterM[^<]*</title>",
+       "QiZhi\\.Bastion",
+       "/audit/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ruijie",
+  "info": {
+   "name": "锐捷网络设备",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,ruijie",
+   "severity": "info",
+   "metadata": {
+    "product": "ruijie",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "锐捷 Ruijie 网络设备 Web 管理界面。",
+   "reference": [
+    "https://www.ruijie.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Ruijie[^<]*</title>",
+       "<title>[^<]*锐捷[^<]*</title>",
+       "<title>[^<]*EWEB[^<]*</title>",
+       "/eweb/js"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "Ruijie"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ruoyi",
+  "info": {
+   "name": "RuoYi",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,ruoyi",
+   "severity": "info",
+   "metadata": {
+    "product": "ruoyi",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "RuoYi（若依）是基于 Spring Boot/Vue 的开源后台权限管理系统。",
+   "reference": [
+    "https://ruoyi.vip"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>RuoYi[^<]*</title>",
+       "<title>若依[^<]*</title>",
+       "若依管理系统",
+       "ruoyi-admin",
+       "Copyright &copy; [\\d-]+ <a [^>]*>ruoyi\\.vip</a>",
+       "/ruoyi/",
+       "ruoyi\\.js"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "safedog",
+  "info": {
+   "name": "安全狗",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,safedog",
+   "severity": "info",
+   "metadata": {
+    "product": "safedog",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "安全狗（Safedog）Web 防护。",
+   "reference": [
+    "https://www.safedog.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:安全狗|Safedog)[^<]*</title>",
+       "safedogsite"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-powered-by-safedog",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^safedog"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "waf",
+      "regex": [
+       "Safedog"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sangfor-ac",
+  "info": {
+   "name": "深信服AC",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,sangfor-ac",
+   "severity": "info",
+   "metadata": {
+    "product": "sangfor-ac",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "深信服 AC（上网行为管理）。",
+   "reference": [
+    "https://www.sangfor.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*SANGFOR(?:[^<]* )?AC[^<]*</title>",
+       "<title>[^<]*上网行为管理[^<]*</title>",
+       "Sangfor SANGFOR Internet Access Management",
+       "/ac_portal/login\\.php"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sangfor-af",
+  "info": {
+   "name": "深信服AF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,sangfor-af",
+   "severity": "info",
+   "metadata": {
+    "product": "sangfor-af",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "深信服 AF（下一代应用防火墙 NGAF）。",
+   "reference": [
+    "https://www.sangfor.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*SANGFOR(?:[^<]* )?(?:AF|NGAF)[^<]*</title>",
+       "<title>[^<]*下一代防火墙[^<]*SANGFOR[^<]*</title>",
+       "/dlogin\\.php\\?nodeid"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sangfor-edr",
+  "info": {
+   "name": "深信服EDR",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,sangfor-edr",
+   "severity": "info",
+   "metadata": {
+    "product": "sangfor-edr",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "深信服 EDR 终端检测响应平台。",
+   "reference": [
+    "https://www.sangfor.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*EDR[^<]*</title>",
+       "<title>[^<]*终端检测响应平台[^<]*</title>",
+       "Sangfor EDR",
+       "/tool/log/c\\.php"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sangfor-ssl-vpn",
+  "info": {
+   "name": "深信服SSL VPN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,sangfor-ssl-vpn",
+   "severity": "info",
+   "metadata": {
+    "product": "sangfor-ssl-vpn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "深信服 SSL VPN 是国内主流的企业远程接入网关。",
+   "reference": [
+    "https://www.sangfor.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:深信服|SANGFOR|Sangfor)[^<]*SSL[^<]*</title>",
+       "/por/login_psw\\.csp",
+       "SANGFOR\\.Login",
+       "/svpn_html/login\\.html",
+       "Sangfor SSL VPN",
+       "/por/",
+       "sangfor\\.js"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "Sangfor"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sangfor-waf",
+  "info": {
+   "name": "深信服WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,sangfor-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "sangfor-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "深信服 WAF（Web 应用防火墙）。",
+   "reference": [
+    "https://www.sangfor.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*SANGFOR(?:[^<]* )?WAF[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sdcms",
+  "info": {
+   "name": "SDCMS",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,sdcms",
+   "severity": "info",
+   "metadata": {
+    "product": "sdcms",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "SDCMS 是基于 ASP/PHP 的轻量级国产 CMS。",
+   "reference": [
+    "https://www.sdcms.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<!-- Powered By SDCMS"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "seeyon-oa",
+  "info": {
+   "name": "致远OA",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,seeyon-oa",
+   "severity": "info",
+   "metadata": {
+    "product": "seeyon-oa",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "致远互联 OA（Seeyon / A6 / A8 / G6）是国内主流的协同办公系统。",
+   "reference": [
+    "https://www.seeyon.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:致远|Seeyon|seeyon)[^<]*</title>",
+       "/seeyon/common/",
+       "/seeyon/USER-DATA/IMAGES/",
+       "var _ctxPath = \"/seeyon\"",
+       "Seeyon Software",
+       "/seeyon/main\\.do",
+       "/seeyon/common/js/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "shimo-docs",
+  "info": {
+   "name": "石墨文档",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,shimo-docs",
+   "severity": "info",
+   "metadata": {
+    "product": "shimo-docs",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "石墨文档（Shimo）在线协作文档。",
+   "reference": [
+    "https://shimo.im"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*石墨[^<]*</title>",
+       "shimo\\.im",
+       "shimo\\.im"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "showdoc",
+  "info": {
+   "name": "ShowDoc",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,showdoc",
+   "severity": "info",
+   "metadata": {
+    "product": "showdoc",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "ShowDoc 是国内开源的接口/API/技术文档工具。",
+   "reference": [
+    "https://www.showdoc.cc"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*ShowDoc[^<]*</title>",
+       "showdoc",
+       "/static/showdoc",
+       "showdoc"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "smartbi",
+  "info": {
+   "name": "Smartbi",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,smartbi",
+   "severity": "info",
+   "metadata": {
+    "product": "smartbi",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Smartbi 思迈特是国内自主可控的 BI 平台。",
+   "reference": [
+    "https://www.smartbi.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Smartbi[^<]*</title>",
+       "<title>[^<]*思迈特[^<]*</title>",
+       "/smartbi/vision/",
+       "smartbi\\.SystemInit",
+       "/smartbi/vision/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "spring-framework",
+  "info": {
+   "name": "Spring Framework",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,spring-framework",
+   "severity": "info",
+   "metadata": {
+    "product": "spring-framework",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Java Spring 框架（Spring MVC / Spring Boot），Whitelabel 错误页与 /error status 999 为典型特征。",
+   "reference": [
+    "https://spring.io"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Whitelabel Error Page",
+       "\"status\":999"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "swagger-ui-subpath",
+  "info": {
+   "name": "swagger-ui-subpath",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,swagger",
+   "severity": "info",
+   "metadata": {
+    "product": "swagger",
+    "vendor": "00_unknown",
+    "verified": true
+   },
+   "description": "Swagger UI 挂在子路径（Springfox/springdoc 典型部署 /swagger-ui.html、/swagger-ui/index.html），根路径无特征的形态补充。"
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/swagger-ui.html",
+     "{{BaseURL}}/swagger-ui/index.html"
+    ],
+    "matchers": [
+     {
+      "type": "word",
+      "words": [
+       "swagger-ui.css",
+       "swagger-ui-bundle.js"
+      ],
+      "condition": "or",
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "teambition",
+  "info": {
+   "name": "Teambition",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,teambition",
+   "severity": "info",
+   "metadata": {
+    "product": "teambition",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Teambition 是阿里旗下的协作平台。",
+   "reference": [
+    "https://www.teambition.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Teambition[^<]*</title>",
+       "teambition\\.com",
+       "teambition\\.com"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tencent-cloud-waf",
+  "info": {
+   "name": "腾讯云WAF",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tencent-cloud-waf",
+   "severity": "info",
+   "metadata": {
+    "product": "tencent-cloud-waf",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "腾讯云 Web 应用防火墙。",
+   "reference": [
+    "https://cloud.tencent.com/product/waf"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "(?:Tencent-Waf|Tencent-WCS)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-nws-log-uuid",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "(?:TencentWAF|tc_qos)"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tencent-docs",
+  "info": {
+   "name": "腾讯文档",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tencent-docs",
+   "severity": "info",
+   "metadata": {
+    "product": "tencent-docs",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "腾讯文档 在线协作文档。",
+   "reference": [
+    "https://docs.qq.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*腾讯文档[^<]*</title>",
+       "docs\\.qq\\.com",
+       "docs\\.gtimg\\.com",
+       "docs\\.qq\\.com"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tencent-edgeone",
+  "info": {
+   "name": "腾讯云EdgeOne",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tencent-edgeone",
+   "severity": "info",
+   "metadata": {
+    "product": "tencent-edgeone",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "腾讯云 EdgeOne 边缘安全加速平台。",
+   "reference": [
+    "https://cloud.tencent.com/product/teo"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "(?:TencentEdgeOne|Teo)"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-edgeone-request-id",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tengine",
+  "info": {
+   "name": "Tengine",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tengine",
+   "severity": "info",
+   "metadata": {
+    "product": "tengine",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Tengine 是淘宝基于 Nginx 二次开发的高性能 Web 服务器。",
+   "reference": [
+    "https://tengine.taobao.org"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "^Tengine(?:/([\\d.]+))?"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "thinkphp",
+  "info": {
+   "name": "ThinkPHP",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,thinkphp",
+   "severity": "info",
+   "metadata": {
+    "product": "thinkphp",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "ThinkPHP 是国产轻量级 PHP MVC 开发框架（常用于建站/CMS 底层）。",
+   "reference": [
+    "https://www.thinkphp.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "/Library/Think/",
+       "/thinkphp/library/think/",
+       "ThinkPHP</a><sup>([\\d.]+)</sup>"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-powered-by",
+      "regex": [
+       "ThinkPHP(?:\\s([\\d.]+))?"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tipask",
+  "info": {
+   "name": "Tipask",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tipask",
+   "severity": "info",
+   "metadata": {
+    "product": "tipask",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Tipask 是国内开源的问答系统，基于 Laravel。",
+   "reference": [
+    "https://www.tipask.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*tipask[^>]*>Tipask</a>",
+       "<meta name=\"generator\" content=\"Tipask"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tongda-oa",
+  "info": {
+   "name": "通达OA",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tongda-oa",
+   "severity": "info",
+   "metadata": {
+    "product": "tongda-oa",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "通达 OA（TongdaOA / 通达信科）是国内常见的办公自动化系统。",
+   "reference": [
+    "https://www.tongda2000.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*通达[^<]*</title>",
+       "<title>[^<]*Office Anywhere[^<]*</title>",
+       "/static/images/tongda\\.gif",
+       "/inc/common\\.js\\?ver=",
+       "TongDa OA",
+       "/inc/common\\.js",
+       "/static/js/inc/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "topsec-firewall",
+  "info": {
+   "name": "天融信防火墙",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,topsec-firewall",
+   "severity": "info",
+   "metadata": {
+    "product": "topsec-firewall",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "天融信 NGFW 下一代防火墙。",
+   "reference": [
+    "https://www.topsec.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Topsec(?:Os|NGFW)?[^<]*</title>",
+       "Topsec Network Security Technology"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "topsec-topapp-lb",
+  "info": {
+   "name": "天融信TopApp-LB",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,topsec-topapp-lb",
+   "severity": "info",
+   "metadata": {
+    "product": "topsec-topapp-lb",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "天融信负载均衡 TopApp-LB。",
+   "reference": [
+    "https://www.topsec.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*天融信[^<]*</title>",
+       "<title>[^<]*Topsec[^<]*</title>",
+       "<title>[^<]*TopApp-LB[^<]*</title>"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tower",
+  "info": {
+   "name": "Tower协作",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,tower",
+   "severity": "info",
+   "metadata": {
+    "product": "tower",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Tower 是国内常见的项目协作工具。",
+   "reference": [
+    "https://tower.im"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Tower[^<]*</title>",
+       "tower\\.im",
+       "tower\\.im"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "turbomail",
+  "info": {
+   "name": "TurboMail",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,turbomail",
+   "severity": "info",
+   "metadata": {
+    "product": "turbomail",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "TurboMail 是国内邮件系统厂商拓波软件的邮件服务系统。",
+   "reference": [
+    "https://www.turbomail.org"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*TurboMail[^<]*</title>",
+       "TurboMail邮件系统",
+       "/turbomail/",
+       "var turbomail"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "typecho",
+  "info": {
+   "name": "Typecho",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,typecho",
+   "severity": "info",
+   "metadata": {
+    "product": "typecho",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Typecho 是国内开源的轻量级 PHP 博客系统。",
+   "reference": [
+    "https://typecho.org"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<meta name=\"generator\" content=\"Typecho",
+       "Powered by <a [^>]*typecho[^>]*>Typecho</a>",
+       "/usr/themes/[^/]+/",
+       "Typecho_Cookie_"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "u-mail",
+  "info": {
+   "name": "U-Mail",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,u-mail",
+   "severity": "info",
+   "metadata": {
+    "product": "u-mail",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "U-Mail 是国内常见的企业邮件系统。",
+   "reference": [
+    "https://www.comingchina.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*U-Mail[^<]*</title>",
+       "/webmail/client/",
+       "U-Mail Server",
+       "umail_login"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-umail",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ucloud-cdn",
+  "info": {
+   "name": "UCloud CDN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,ucloud-cdn",
+   "severity": "info",
+   "metadata": {
+    "product": "ucloud-cdn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "UCloud 优刻得 CDN。",
+   "reference": [
+    "https://www.ucloud.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "x-ucdn-cache",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "ucloud"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ueditor",
+  "info": {
+   "name": "UEditor",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,ueditor",
+   "severity": "info",
+   "metadata": {
+    "product": "ueditor",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "UEditor 是百度开源的开源 HTML 富文本编辑器。",
+   "reference": [
+    "https://fex.baidu.com/ueditor/"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<script[^>]*ueditor(?:\\.all)?(?:\\.min)?\\.js[^>]*></script>",
+       "/ueditor/(?:ueditor|third-party)",
+       "ueditor\\.all(?:\\.min)?\\.js"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "uniview",
+  "info": {
+   "name": "宇视科技",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,uniview",
+   "severity": "info",
+   "metadata": {
+    "product": "uniview",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "宇视科技 Uniview 摄像机 / NVR Web 管理界面。",
+   "reference": [
+    "https://www.uniview.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Uniview[^<]*</title>",
+       "uniview\\.js",
+       "/LAPI/V1\\.0/"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "uc-httpd"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "upyun-cdn",
+  "info": {
+   "name": "又拍云CDN",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,upyun-cdn",
+   "severity": "info",
+   "metadata": {
+    "product": "upyun-cdn",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "又拍云 UPYUN CDN/对象存储。",
+   "reference": [
+    "https://www.upyun.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "part": "server",
+      "regex": [
+       "(?:marco|UPYUN|nginx-upyun|tengine/upyun)"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "venustech-tianqing-hanma",
+  "info": {
+   "name": "启明星辰天清汉马",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,venustech-tianqing-hanma",
+   "severity": "info",
+   "metadata": {
+    "product": "venustech-tianqing-hanma",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "启明星辰 天清汉马 USG 防火墙。",
+   "reference": [
+    "https://www.venustech.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:天清|VenusTech|Venusense)[^<]*</title>",
+       "<title>[^<]*汉马[^<]*</title>",
+       "VenusInfo"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "weaver-e-cology",
+  "info": {
+   "name": "泛微e-cology",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,weaver-e-cology",
+   "severity": "info",
+   "metadata": {
+    "product": "weaver-e-cology",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "泛微 e-cology 是国内大型企业广泛使用的协同办公平台。",
+   "reference": [
+    "https://www.weaver.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:泛微|e-cology|ecology)[^<]*</title>",
+       "/wui/theme/",
+       "/wui/index\\.html",
+       "weaver\\.common\\.",
+       "ecology_JSessionid",
+       "/js/weaver\\.",
+       "/wui/common/"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "ecology_JSessionid"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "loginPageURL"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "weaver-e-mobile",
+  "info": {
+   "name": "泛微e-mobile",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,weaver-e-mobile",
+   "severity": "info",
+   "metadata": {
+    "product": "weaver-e-mobile",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "泛微 e-mobile 是泛微面向移动办公的客户端服务端。",
+   "reference": [
+    "https://www.weaver.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:e-mobile|EMobile)[^<]*</title>",
+       "/client/login\\.jsp",
+       "/emobile/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "weaver-e-office",
+  "info": {
+   "name": "泛微e-office",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,weaver-e-office",
+   "severity": "info",
+   "metadata": {
+    "product": "weaver-e-office",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "泛微 e-office 是面向中小企业的协同办公平台。",
+   "reference": [
+    "https://www.weaver.com.cn/eoffice.html"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*(?:e-office|E-Office|eoffice)[^<]*</title>",
+       "/eoffice_resource/",
+       "/general/login_code\\.php",
+       "var _eoffice",
+       "/eoffice/",
+       "eoffice_loading"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "websoftoa",
+  "info": {
+   "name": "WebsoftOA",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,websoftoa",
+   "severity": "info",
+   "metadata": {
+    "product": "websoftoa",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "万户网络 OA。",
+   "reference": [
+    "http://www.whir.net"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*万户[^<]*</title>",
+       "<title>[^<]*ezOFFICE[^<]*</title>",
+       "whir/oa"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wecenter",
+  "info": {
+   "name": "WeCenter",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,wecenter",
+   "severity": "info",
+   "metadata": {
+    "product": "wecenter",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "WeCenter 是国内开源的社交化知识社区系统。",
+   "reference": [
+    "https://www.wecenter.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "Powered by <a [^>]*wecenter[^>]*>WeCenter</a>",
+       "<meta name=\"description\" content=\"[^\"]*WeCenter",
+       "/static/wecenter"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "_wecenter_session"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wecom",
+  "info": {
+   "name": "企业微信",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,wecom",
+   "severity": "info",
+   "metadata": {
+    "product": "wecom",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "企业微信（WeCom）相关网页。",
+   "reference": [
+    "https://work.weixin.qq.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*企业微信[^<]*</title>",
+       "work\\.weixin\\.qq\\.com",
+       "wwapi",
+       "wwcdn\\.weixin\\.qq\\.com",
+       "work\\.weixin\\.qq\\.com"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "winwebmail",
+  "info": {
+   "name": "WinWebMail",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,winwebmail",
+   "severity": "info",
+   "metadata": {
+    "product": "winwebmail",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "WinWebMail 是国内常见的 Windows 平台邮件系统。",
+   "reference": [
+    "http://www.winwebmail.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*WinWebMail[^<]*</title>",
+       "/admin/help/winwebmail",
+       "WinWebMail Server"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wordpress-zh-tw",
+  "info": {
+   "name": "WordPress繁体中文",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,wordpress-zh-tw",
+   "severity": "info",
+   "metadata": {
+    "product": "wordpress-zh-tw",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "WordPress 中文化插件 / 主题特征。",
+   "reference": [
+    "https://wordpress.org"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "/wp-content/themes/(?:bgz|jingxin|begin|webstack)"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "xiaoe-tech",
+  "info": {
+   "name": "小鹅通",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,xiaoe-tech",
+   "severity": "info",
+   "metadata": {
+    "product": "xiaoe-tech",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "小鹅通是国内常见的知识付费/教学 SaaS 平台。",
+   "reference": [
+    "https://www.xiaoe-tech.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*小鹅通[^<]*</title>",
+       "xiaoe-tech\\.com",
+       "xeknow",
+       "xiaoeknow\\.com",
+       "xiaoe-tech\\.com"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "xingyun-fortress",
+  "info": {
+   "name": "行云堡垒",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,xingyun-fortress",
+   "severity": "info",
+   "metadata": {
+    "product": "xingyun-fortress",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "行云堡垒（XingYun Bastion）。",
+   "reference": [
+    "https://www.xingyuncloud.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*行云堡垒[^<]*</title>",
+       "xingyun_bastion"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "yapi",
+  "info": {
+   "name": "YApi",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,yapi",
+   "severity": "info",
+   "metadata": {
+    "product": "yapi",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "YApi 是去哪儿网开源的可视化 API 管理平台。",
+   "reference": [
+    "https://github.com/YMFE/yapi"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>YApi[^<]*</title>",
+       "yapi-cli",
+       "/static/prd/index\\.js"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "_yapi_token"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "_yapi_uid"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "yonghong-bi",
+  "info": {
+   "name": "永洪BI",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,yonghong-bi",
+   "severity": "info",
+   "metadata": {
+    "product": "yonghong-bi",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "永洪 Yonghong BI 数据分析与可视化平台。",
+   "reference": [
+    "https://www.yonghongtech.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*Yonghong[^<]*</title>",
+       "<title>[^<]*永洪[^<]*</title>",
+       "/bi/Viewer",
+       "yonghong"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "yonyou-nc",
+  "info": {
+   "name": "用友NC",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,yonyou-nc",
+   "severity": "info",
+   "metadata": {
+    "product": "yonyou-nc",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "用友 NC / NCCloud 是大型企业广泛使用的 ERP/财务系统。",
+   "reference": [
+    "https://www.yonyou.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*用友[^<]*</title>",
+       "<title>[^<]*(?:NC Cloud|NCCloud|YonyouNC)[^<]*</title>",
+       "/nccloud/",
+       "/uapjs/jsvm",
+       "yyuap",
+       "/nccloud/",
+       "/uapjs/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "yonyou-u8",
+  "info": {
+   "name": "用友U8",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,yonyou-u8",
+   "severity": "info",
+   "metadata": {
+    "product": "yonyou-u8",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "用友 U8 是面向中型企业的 ERP 软件。",
+   "reference": [
+    "https://www.yonyou.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<title>[^<]*U8[^<]*</title>",
+       "/U8Web/",
+       "U8Login",
+       "U8\\.UFIDA\\."
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "yunsuo",
+  "info": {
+   "name": "云锁",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,yunsuo",
+   "severity": "info",
+   "metadata": {
+    "product": "yunsuo",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "云锁（Yunsuo）服务器安全防护。",
+   "reference": [
+    "https://www.yunsuo.com.cn"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "yunsuologo",
+       "<title>[^<]*云锁[^<]*</title>"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "set-cookie",
+      "regex": [
+       "yunsuo_session"
+      ],
+      "case-insensitive": true
+     },
+     {
+      "type": "regex",
+      "part": "x-powered-by-yunsuo",
+      "regex": [
+       ".+"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "z-blogphp",
+  "info": {
+   "name": "Z-BlogPHP",
+   "author": "P0m32Kun",
+   "tags": "detect,tech,z-blogphp",
+   "severity": "info",
+   "metadata": {
+    "product": "z-blogphp",
+    "vendor": "00_unknown",
+    "verified": false
+   },
+   "description": "Z-BlogPHP 是国内常见的 PHP 博客建站系统。",
+   "reference": [
+    "https://www.zblogcn.com"
+   ]
+  },
+  "http": [
+   {
+    "method": "GET",
+    "path": [
+     "{{BaseURL}}/"
+    ],
+    "matchers": [
+     {
+      "type": "regex",
+      "regex": [
+       "<meta name=\"generator\" content=\"Z-BlogPHP",
+       "Powered by <a [^>]*zblogcn[^>]*>Z-BlogPHP</a>",
+       "/zb_users/theme/",
+       "/zb_system/"
+      ],
+      "case-insensitive": true
+     }
+    ]
+   }
+  ]
+ }
+]
