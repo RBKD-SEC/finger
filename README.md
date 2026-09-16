@@ -1,5 +1,8 @@
 # finger
 
+> [!WARNING]
+> **资产待迁移（见任务 C），仓库冻结（2026-09-16）**。new-Anchor 已于 2026-09-06 退役 httpx，本指纹库现为孤儿资产；计划迁入 observer_ward / FingerprintHub 格式并并入 new-Anchor 生态后，本仓移入 `~/DEV/archive/`。详见 `~/DEV/portfolio-plan-2026-09-16.md` 任务 C。
+
 为 [projectdiscovery/httpx](https://github.com/projectdiscovery/httpx) 补充的国内常见 Web 指纹库。
 
 httpx 内置技术栈识别基于 [wappalyzergo](https://github.com/projectdiscovery/wappalyzergo)，对国外组件覆盖良好，但对国内常用的 CMS、OA、邮件系统、安全设备、运维面板、CDN/WAF 等覆盖很少。本仓库以 wappalyzer 兼容格式补齐这部分指纹，可直接通过 `-cff` / `-custom-fingerprint-file` 参数加载。
